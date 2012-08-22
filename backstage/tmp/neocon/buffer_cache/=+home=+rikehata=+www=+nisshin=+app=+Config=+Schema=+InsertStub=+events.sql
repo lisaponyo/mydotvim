@@ -1,0 +1,13 @@
+INSERT|||INSERT|||[B] events.sql|||
+INTO|||INTO|||[B] events.sql|||
+recipe_categories|||recipe_categories|||[B] events.sql|||
+name|||name|||[B] events.sql|||
+kind|||kind|||[B] events.sql|||
+status|||status|||[B] events.sql|||
+VALUES|||VALUES|||[B] events.sql|||
+食パン|||食パン|||[B] events.sql|||
+フランスパン|||フランスパン|||[B] events.sql|||
+スポンジケーキ|||スポンジケーキ|||[B] events.sql|||
+バターケーキ|||バターケーキ|||[B] events.sql|||
+お好み焼き|||お好み焼き|||[B] events.sql|||
+たこ焼き|||たこ焼き|||[B] events.sql|||

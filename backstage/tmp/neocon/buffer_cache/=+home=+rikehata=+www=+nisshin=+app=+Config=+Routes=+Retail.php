@@ -1,0 +1,14 @@
+SITE_REFERENCE_PREFIX|||SITE_REFERENCE_PREFIX|||[B] Retail.php|||
+Router::connect|||Router::connect|||[B] Retail.php|||
+admin|||admin|||[B] Retail.php|||
+controller|||controller|||[B] Retail.php|||
+array|||array|||[B] Retail.php|||
+action|||action|||[B] Retail.php|||
+index|||index|||[B] Retail.php|||
+pages|||pages|||[B] Retail.php|||
+display|||display|||[B] Retail.php|||
+CakePlugin::routes|||CakePlugin::routes|||[B] Retail.php|||
+require|||require|||[B] Retail.php|||
+CAKE|||CAKE|||[B] Retail.php|||
+Config|||Config|||[B] Retail.php|||
+routes|||routes|||[B] Retail.php|||

@@ -1,0 +1,40 @@
+aside|||aside|||[B] applicant_sideb|||
+<div |||<div |||[B] applicant_sideb|||
+<h2>|||<h2>|||[B] applicant_sideb|||
+</h2>|||</h2>|||[B] applicant_sideb|||
+class|||class|||[B] applicant_sideb|||
+block|||block|||[B] applicant_sideb|||
+<ul |||<ul |||[B] applicant_sideb|||
+mine|||mine|||[B] applicant_sideb|||
+<li |||<li |||[B] applicant_sideb|||
+href|||href|||[B] applicant_sideb|||
+index|||index|||[B] applicant_sideb|||
+</a>|||</a>|||[B] applicant_sideb|||
+</li>|||</li>|||[B] applicant_sideb|||
+regist|||regist|||[B] applicant_sideb|||
+<ul>|||<ul>|||[B] applicant_sideb|||
+active|||active|||[B] applicant_sideb|||
+edit|||edit|||[B] applicant_sideb|||
+applicant|||applicant|||[B] applicant_sideb|||
+echo|||echo|||[B] applicant_sideb|||
+$this|||$this|||[B] applicant_sideb|||
+Html|||Html|||[B] applicant_sideb|||
+link|||link|||[B] applicant_sideb|||
+array|||array|||[B] applicant_sideb|||
+controller|||controller|||[B] applicant_sideb|||
+seminars|||seminars|||[B] applicant_sideb|||
+action|||action|||[B] applicant_sideb|||
+applicantStartInput|||applicantStartInput|||[B] applicant_sideb|||
+<li>|||<li>|||[B] applicant_sideb|||
+startInput|||startInput|||[B] applicant_sideb|||
+empty|||empty|||[B] applicant_sideb|||
+$user|||$user|||[B] applicant_sideb|||
+SeminarUser|||SeminarUser|||[B] applicant_sideb|||
+seminar_id|||seminar_id|||[B] applicant_sideb|||
+$seminar_id|||$seminar_id|||[B] applicant_sideb|||
+data|||data|||[B] applicant_sideb|||
+Seminar|||Seminar|||[B] applicant_sideb|||
+applicantIndex|||applicantIndex|||[B] applicant_sideb|||
+</ul>|||</ul>|||[B] applicant_sideb|||
+</div>|||</div>|||[B] applicant_sideb|||
+r3747|||r3747|||[B] applicant_sideb|||

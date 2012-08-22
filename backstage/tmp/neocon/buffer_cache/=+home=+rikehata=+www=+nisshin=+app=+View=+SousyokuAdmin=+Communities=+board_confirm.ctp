@@ -1,0 +1,56 @@
+article|||article|||[B] board_confirm.c|||
+<div |||<div |||[B] board_confirm.c|||
+class|||class|||[B] board_confirm.c|||
+block|||block|||[B] board_confirm.c|||
+<h1>|||<h1>|||[B] board_confirm.c|||
+</h1>|||</h1>|||[B] board_confirm.c|||
+echo|||echo|||[B] board_confirm.c|||
+$this|||$this|||[B] board_confirm.c|||
+Session|||Session|||[B] board_confirm.c|||
+flash|||flash|||[B] board_confirm.c|||
+</div>|||</div>|||[B] board_confirm.c|||
+<h2>|||<h2>|||[B] board_confirm.c|||
+</h2>|||</h2>|||[B] board_confirm.c|||
+registTable|||registTable|||[B] board_confirm.c|||
+<table |||<table |||[B] board_confirm.c|||
+search|||search|||[B] board_confirm.c|||
+<tr>|||<tr>|||[B] board_confirm.c|||
+<th>|||<th>|||[B] board_confirm.c|||
+</th>|||</th>|||[B] board_confirm.c|||
+<td>|||<td>|||[B] board_confirm.c|||
+$community|||$community|||[B] board_confirm.c|||
+Community|||Community|||[B] board_confirm.c|||
+name|||name|||[B] board_confirm.c|||
+</td>|||</td>|||[B] board_confirm.c|||
+</tr>|||</tr>|||[B] board_confirm.c|||
+data|||data|||[B] board_confirm.c|||
+Board|||Board|||[B] board_confirm.c|||
+explanation|||explanation|||[B] board_confirm.c|||
+</table>|||</table>|||[B] board_confirm.c|||
+round|||round|||[B] board_confirm.c|||
+<ul |||<ul |||[B] board_confirm.c|||
+doubleButton|||doubleButton|||[B] board_confirm.c|||
+Form|||Form|||[B] board_confirm.c|||
+create|||create|||[B] board_confirm.c|||
+array|||array|||[B] board_confirm.c|||
+type|||type|||[B] board_confirm.c|||
+file|||file|||[B] board_confirm.c|||
+withPreview|||withPreview|||[B] board_confirm.c|||
+Utils|||Utils|||[B] board_confirm.c|||
+hiddenVars|||hiddenVars|||[B] board_confirm.c|||
+request|||request|||[B] board_confirm.c|||
+<li |||<li |||[B] board_confirm.c|||
+button01|||button01|||[B] board_confirm.c|||
+submit|||submit|||[B] board_confirm.c|||
+back|||back|||[B] board_confirm.c|||
+</li>|||</li>|||[B] board_confirm.c|||
+button02|||button02|||[B] board_confirm.c|||
+inputImgBtn|||inputImgBtn|||[B] board_confirm.c|||
+confirm|||confirm|||[B] board_confirm.c|||
+input|||input|||[B] board_confirm.c|||
+hidden|||hidden|||[B] board_confirm.c|||
+</ul>|||</ul>|||[B] board_confirm.c|||
+element|||element|||[B] board_confirm.c|||
+communities|||communities|||[B] board_confirm.c|||
+community_sidebar|||community_sidebar|||[B] board_confirm.c|||
+manual|||manual|||[B] board_confirm.c|||

@@ -1,0 +1,14 @@
+App::uses|||App::uses|||[B] CommunityUser.p|||
+AppModel|||AppModel|||[B] CommunityUser.p|||
+Model|||Model|||[B] CommunityUser.p|||
+class|||class|||[B] CommunityUser.p|||
+CommunityUser|||CommunityUser|||[B] CommunityUser.p|||
+extends|||extends|||[B] CommunityUser.p|||
+public|||public|||[B] CommunityUser.p|||
+$belongsTo|||$belongsTo|||[B] CommunityUser.p|||
+array|||array|||[B] CommunityUser.p|||
+User|||User|||[B] CommunityUser.p|||
+$hasMany|||$hasMany|||[B] CommunityUser.p|||
+Affiliation|||Affiliation|||[B] CommunityUser.p|||
+BoardComment|||BoardComment|||[B] CommunityUser.p|||
+BoardReport|||BoardReport|||[B] CommunityUser.p|||

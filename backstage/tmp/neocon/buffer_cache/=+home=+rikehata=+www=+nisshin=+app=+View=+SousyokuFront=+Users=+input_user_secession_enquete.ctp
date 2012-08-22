@@ -1,0 +1,66 @@
+$require|||$require|||[B] input_user_sece|||
+array|||array|||[B] input_user_sece|||
+required|||required|||[B] input_user_sece|||
+between|||between|||[B] input_user_sece|||
+<span |||<span |||[B] input_user_sece|||
+class|||class|||[B] input_user_sece|||
+label|||label|||[B] input_user_sece|||
+important|||important|||[B] input_user_sece|||
+</span>|||</span>|||[B] input_user_sece|||
+nbsp|||nbsp|||[B] input_user_sece|||
+echo|||echo|||[B] input_user_sece|||
+$this|||$this|||[B] input_user_sece|||
+element|||element|||[B] input_user_sece|||
+sidebar|||sidebar|||[B] input_user_sece|||
+article|||article|||[B] input_user_sece|||
+<div |||<div |||[B] input_user_sece|||
+InstanceBeginEditable|||InstanceBeginEditable|||[B] input_user_sece|||
+name|||name|||[B] input_user_sece|||
+block|||block|||[B] input_user_sece|||
+<h1>|||<h1>|||[B] input_user_sece|||
+<img |||<img |||[B] input_user_sece|||
+form|||form|||[B] input_user_sece|||
+member|||member|||[B] input_user_sece|||
+main_title_01|||main_title_01|||[B] input_user_sece|||
+width|||width|||[B] input_user_sece|||
+height|||height|||[B] input_user_sece|||
+</h1>|||</h1>|||[B] input_user_sece|||
+Form|||Form|||[B] input_user_sece|||
+create|||create|||[B] input_user_sece|||
+User|||User|||[B] input_user_sece|||
+Session|||Session|||[B] input_user_sece|||
+flash|||flash|||[B] input_user_sece|||
+<h2>|||<h2>|||[B] input_user_sece|||
+information_title_01|||information_title_01|||[B] input_user_sece|||
+</h2>|||</h2>|||[B] input_user_sece|||
+note|||note|||[B] input_user_sece|||
+</p>|||</p>|||[B] input_user_sece|||
+<table>|||<table>|||[B] input_user_sece|||
+<tr>|||<tr>|||[B] input_user_sece|||
+<th>|||<th>|||[B] input_user_sece|||
+</b>|||</b>|||[B] input_user_sece|||
+</th>|||</th>|||[B] input_user_sece|||
+<td>|||<td>|||[B] input_user_sece|||
+input|||input|||[B] input_user_sece|||
+Company|||Company|||[B] input_user_sece|||
+business_id|||business_id|||[B] input_user_sece|||
+empty|||empty|||[B] input_user_sece|||
+</td>|||</td>|||[B] input_user_sece|||
+</tr>|||</tr>|||[B] input_user_sece|||
+</table>|||</table>|||[B] input_user_sece|||
+<ul |||<ul |||[B] input_user_sece|||
+doubleButton|||doubleButton|||[B] input_user_sece|||
+<li>|||<li>|||[B] input_user_sece|||
+<input |||<input |||[B] input_user_sece|||
+type|||type|||[B] input_user_sece|||
+image|||image|||[B] input_user_sece|||
+btn_cancel_01_off|||btn_cancel_01_off|||[B] input_user_sece|||
+inputImgBtn|||inputImgBtn|||[B] input_user_sece|||
+back|||back|||[B] input_user_sece|||
+</li>|||</li>|||[B] input_user_sece|||
+next_btn_01_off|||next_btn_01_off|||[B] input_user_sece|||
+regist|||regist|||[B] input_user_sece|||
+primarySubmit|||primarySubmit|||[B] input_user_sece|||
+</ul>|||</ul>|||[B] input_user_sece|||
+</div>|||</div>|||[B] input_user_sece|||
+InstanceEndEditable|||InstanceEndEditable|||[B] input_user_sece|||

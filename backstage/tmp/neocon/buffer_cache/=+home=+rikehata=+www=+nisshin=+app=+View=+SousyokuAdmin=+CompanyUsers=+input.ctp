@@ -1,0 +1,31 @@
+<div |||<div |||[B] input.ctp|||
+class|||class|||[B] input.ctp|||
+span12|||span12|||[B] input.ctp|||
+echo|||echo|||[B] input.ctp|||
+$this|||$this|||[B] input.ctp|||
+Form|||Form|||[B] input.ctp|||
+create|||create|||[B] input.ctp|||
+User|||User|||[B] input.ctp|||
+<h3>|||<h3>|||[B] input.ctp|||
+</h3>|||</h3>|||[B] input.ctp|||
+<dl |||<dl |||[B] input.ctp|||
+horizontal|||horizontal|||[B] input.ctp|||
+<dt>|||<dt>|||[B] input.ctp|||
+</dt>|||</dt>|||[B] input.ctp|||
+<dd>|||<dd>|||[B] input.ctp|||
+input|||input|||[B] input.ctp|||
+company_id|||company_id|||[B] input.ctp|||
+array|||array|||[B] input.ctp|||
+type|||type|||[B] input.ctp|||
+select|||select|||[B] input.ctp|||
+</dd>|||</dd>|||[B] input.ctp|||
+username|||username|||[B] input.ctp|||
+password|||password|||[B] input.ctp|||
+name|||name|||[B] input.ctp|||
+kana|||kana|||[B] input.ctp|||
+email|||email|||[B] input.ctp|||
+department|||department|||[B] input.ctp|||
+occupation|||occupation|||[B] input.ctp|||
+</dl>|||</dl>|||[B] input.ctp|||
+submit|||submit|||[B] input.ctp|||
+</div>|||</div>|||[B] input.ctp|||

@@ -1,0 +1,13 @@
+INSERT|||INSERT|||[B] recipe_categori|||
+INTO|||INTO|||[B] recipe_categori|||
+recipe_categories|||recipe_categories|||[B] recipe_categori|||
+name|||name|||[B] recipe_categori|||
+kind|||kind|||[B] recipe_categori|||
+status|||status|||[B] recipe_categori|||
+VALUES|||VALUES|||[B] recipe_categori|||
+食パン|||食パン|||[B] recipe_categori|||
+フランスパン|||フランスパン|||[B] recipe_categori|||
+スポンジケーキ|||スポンジケーキ|||[B] recipe_categori|||
+バターケーキ|||バターケーキ|||[B] recipe_categori|||
+お好み焼き|||お好み焼き|||[B] recipe_categori|||
+たこ焼き|||たこ焼き|||[B] recipe_categori|||

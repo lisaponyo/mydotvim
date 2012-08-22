@@ -1,0 +1,3 @@
+cdls|||cdls|||[I] .shrc|||/^function cdls() {$/
+removeGitSubmodule|||removeGitSubmodule|||[I] .shrc|||/^function removeGitSubmodule() {$/
+tarExtract|||tarExtract|||[I] .shrc|||/^function tarExtract() {$/

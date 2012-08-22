@@ -1,0 +1,13 @@
+App::uses|||App::uses|||[B] Ctlgbun.php|||
+AppModel|||AppModel|||[B] Ctlgbun.php|||
+Model|||Model|||[B] Ctlgbun.php|||
+Ctlgbun|||Ctlgbun|||[B] Ctlgbun.php|||
+class|||class|||[B] Ctlgbun.php|||
+extends|||extends|||[B] Ctlgbun.php|||
+table|||table|||[B] Ctlgbun.php|||
+mixed|||mixed|||[B] Ctlgbun.php|||
+False|||False|||[B] Ctlgbun.php|||
+name|||name|||[B] Ctlgbun.php|||
+public|||public|||[B] Ctlgbun.php|||
+$useTable|||$useTable|||[B] Ctlgbun.php|||
+ctlgbun|||ctlgbun|||[B] Ctlgbun.php|||

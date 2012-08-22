@@ -1,0 +1,56 @@
+echo|||echo|||[B] input_parent_co|||
+$this|||$this|||[B] input_parent_co|||
+element|||element|||[B] input_parent_co|||
+sidebar|||sidebar|||[B] input_parent_co|||
+article|||article|||[B] input_parent_co|||
+<div |||<div |||[B] input_parent_co|||
+InstanceBeginEditable|||InstanceBeginEditable|||[B] input_parent_co|||
+name|||name|||[B] input_parent_co|||
+class|||class|||[B] input_parent_co|||
+block|||block|||[B] input_parent_co|||
+<h1>|||<h1>|||[B] input_parent_co|||
+<img |||<img |||[B] input_parent_co|||
+form|||form|||[B] input_parent_co|||
+mailaddress|||mailaddress|||[B] input_parent_co|||
+main_title_01|||main_title_01|||[B] input_parent_co|||
+width|||width|||[B] input_parent_co|||
+height|||height|||[B] input_parent_co|||
+</h1>|||</h1>|||[B] input_parent_co|||
+note|||note|||[B] input_parent_co|||
+</p>|||</p>|||[B] input_parent_co|||
+Form|||Form|||[B] input_parent_co|||
+create|||create|||[B] input_parent_co|||
+UserRegist|||UserRegist|||[B] input_parent_co|||
+<h2>|||<h2>|||[B] input_parent_co|||
+title_02|||title_02|||[B] input_parent_co|||
+</h2>|||</h2>|||[B] input_parent_co|||
+block2|||block2|||[B] input_parent_co|||
+<table>|||<table>|||[B] input_parent_co|||
+<tr>|||<tr>|||[B] input_parent_co|||
+<th>|||<th>|||[B] input_parent_co|||
+nbsp|||nbsp|||[B] input_parent_co|||
+</th>|||</th>|||[B] input_parent_co|||
+<td>|||<td>|||[B] input_parent_co|||
+data|||data|||[B] input_parent_co|||
+email|||email|||[B] input_parent_co|||
+String|||String|||[B] input_parent_co|||
+</td>|||</td>|||[B] input_parent_co|||
+</tr>|||</tr>|||[B] input_parent_co|||
+</table>|||</table>|||[B] input_parent_co|||
+</div>|||</div>|||[B] input_parent_co|||
+<ul |||<ul |||[B] input_parent_co|||
+doubleButton|||doubleButton|||[B] input_parent_co|||
+<li>|||<li>|||[B] input_parent_co|||
+<input |||<input |||[B] input_parent_co|||
+type|||type|||[B] input_parent_co|||
+image|||image|||[B] input_parent_co|||
+btn_cancel_01_off|||btn_cancel_01_off|||[B] input_parent_co|||
+inputImgBtn|||inputImgBtn|||[B] input_parent_co|||
+back|||back|||[B] input_parent_co|||
+</li>|||</li>|||[B] input_parent_co|||
+member|||member|||[B] input_parent_co|||
+send_btn_01_off|||send_btn_01_off|||[B] input_parent_co|||
+regist|||regist|||[B] input_parent_co|||
+primarySubmit|||primarySubmit|||[B] input_parent_co|||
+</ul>|||</ul>|||[B] input_parent_co|||
+InstanceEndEditable|||InstanceEndEditable|||[B] input_parent_co|||

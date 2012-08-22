@@ -1,0 +1,13 @@
+App::uses|||App::uses|||[B] EsgyosyuMst.php|||
+AppModel|||AppModel|||[B] EsgyosyuMst.php|||
+Model|||Model|||[B] EsgyosyuMst.php|||
+EsgyosyuMst|||EsgyosyuMst|||[B] EsgyosyuMst.php|||
+class|||class|||[B] EsgyosyuMst.php|||
+extends|||extends|||[B] EsgyosyuMst.php|||
+table|||table|||[B] EsgyosyuMst.php|||
+mixed|||mixed|||[B] EsgyosyuMst.php|||
+False|||False|||[B] EsgyosyuMst.php|||
+name|||name|||[B] EsgyosyuMst.php|||
+public|||public|||[B] EsgyosyuMst.php|||
+$useTable|||$useTable|||[B] EsgyosyuMst.php|||
+esgyosyu_mst|||esgyosyu_mst|||[B] EsgyosyuMst.php|||

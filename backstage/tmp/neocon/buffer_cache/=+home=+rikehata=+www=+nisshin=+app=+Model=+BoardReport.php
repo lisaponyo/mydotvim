@@ -1,0 +1,11 @@
+App::uses|||App::uses|||[B] BoardReport.php|||
+AppModel|||AppModel|||[B] BoardReport.php|||
+Model|||Model|||[B] BoardReport.php|||
+class|||class|||[B] BoardReport.php|||
+BoardReport|||BoardReport|||[B] BoardReport.php|||
+extends|||extends|||[B] BoardReport.php|||
+public|||public|||[B] BoardReport.php|||
+$belongsTo|||$belongsTo|||[B] BoardReport.php|||
+array|||array|||[B] BoardReport.php|||
+BoardComment|||BoardComment|||[B] BoardReport.php|||
+CommunityUser|||CommunityUser|||[B] BoardReport.php|||

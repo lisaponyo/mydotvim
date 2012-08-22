@@ -1,0 +1,11 @@
+xxx|||xxx|||[S] svnRegion|||
+ALL|||ALL|||[S] svnRegion|||
+match|||match|||[S] svnRemoved|||
+start|||start|||[S] svnRegion|||
+svnRegion|||svnRegion|||[S] svnRegion|||
+svnRemoved|||svnRemoved|||[S] svnRemoved|||
+svnAdded|||svnAdded|||[S] svnAdded|||
+svnModified|||svnModified|||[S] svnModified|||
+svnProperty|||svnProperty|||[S] svnProperty|||
+end|||end|||[S] svnRegion|||
+contains|||contains|||[S] svnRegion|||

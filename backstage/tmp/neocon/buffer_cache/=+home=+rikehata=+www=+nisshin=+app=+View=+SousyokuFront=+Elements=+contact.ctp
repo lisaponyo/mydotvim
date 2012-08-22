@@ -1,0 +1,31 @@
+$Judge|||$Judge|||[B] contact.ctp|||
+isNisshin|||isNisshin|||[B] contact.ctp|||
+isCompany|||isCompany|||[B] contact.ctp|||
+isPremier|||isPremier|||[B] contact.ctp|||
+<div |||<div |||[B] contact.ctp|||
+class|||class|||[B] contact.ctp|||
+telInfomation|||telInfomation|||[B] contact.ctp|||
+printOff|||printOff|||[B] contact.ctp|||
+<img |||<img |||[B] contact.ctp|||
+main|||main|||[B] contact.ctp|||
+box_tel_01|||box_tel_01|||[B] contact.ctp|||
+width|||width|||[B] contact.ctp|||
+height|||height|||[B] contact.ctp|||
+link|||link|||[B] contact.ctp|||
+$this|||$this|||[B] contact.ctp|||
+action|||action|||[B] contact.ctp|||
+inquiryInput|||inquiryInput|||[B] contact.ctp|||
+inquiryConfirm|||inquiryConfirm|||[B] contact.ctp|||
+request|||request|||[B] contact.ctp|||
+params|||params|||[B] contact.ctp|||
+pass|||pass|||[B] contact.ctp|||
+echo|||echo|||[B] contact.ctp|||
+Html|||Html|||[B] contact.ctp|||
+users|||users|||[B] contact.ctp|||
+startInquiry|||startInquiry|||[B] contact.ctp|||
+name|||name|||[B] contact.ctp|||
+array|||array|||[B] contact.ctp|||
+target|||target|||[B] contact.ctp|||
+_blank|||_blank|||[B] contact.ctp|||
+else|||else|||[B] contact.ctp|||
+</div>|||</div>|||[B] contact.ctp|||

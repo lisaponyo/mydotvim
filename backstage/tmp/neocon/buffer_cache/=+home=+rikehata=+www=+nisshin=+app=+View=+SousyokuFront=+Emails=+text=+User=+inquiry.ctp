@@ -1,0 +1,10 @@
+Club|||Club|||[B] inquiry.ctp|||
+echo|||echo|||[B] inquiry.ctp|||
+$username|||$username|||[B] inquiry.ctp|||
+$company_id|||$company_id|||[B] inquiry.ctp|||
+$company_name|||$company_name|||[B] inquiry.ctp|||
+$factory|||$factory|||[B] inquiry.ctp|||
+$kana|||$kana|||[B] inquiry.ctp|||
+$email|||$email|||[B] inquiry.ctp|||
+$title|||$title|||[B] inquiry.ctp|||
+$inquiry|||$inquiry|||[B] inquiry.ctp|||

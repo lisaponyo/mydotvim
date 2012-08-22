@@ -1,0 +1,12 @@
+echo|||echo|||[B] index.ctp|||
+$this|||$this|||[B] index.ctp|||
+Html|||Html|||[B] index.ctp|||
+link|||link|||[B] index.ctp|||
+array|||array|||[B] index.ctp|||
+controller|||controller|||[B] index.ctp|||
+premier_users|||premier_users|||[B] index.ctp|||
+action|||action|||[B] index.ctp|||
+startInputTerms|||startInputTerms|||[B] index.ctp|||
+<br>|||<br>|||[B] index.ctp|||
+startInputUserSecessionEnquete|||startInputUserSecessionEnquete|||[B] index.ctp|||
+users|||users|||[B] index.ctp|||

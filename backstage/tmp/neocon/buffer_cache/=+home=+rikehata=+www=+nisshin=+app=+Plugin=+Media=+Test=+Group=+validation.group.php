@@ -1,0 +1,17 @@
+class|||class|||[B] validation.grou|||
+AllValidationGroupTest|||AllValidationGroupTest|||[B] validation.grou|||
+extends|||extends|||[B] validation.grou|||
+TestSuite|||TestSuite|||[B] validation.grou|||
+$label|||$label|||[B] validation.grou|||
+validation|||validation|||[B] validation.grou|||
+related|||related|||[B] validation.grou|||
+test|||test|||[B] validation.grou|||
+cases|||cases|||[B] validation.grou|||
+function|||function|||[B] validation.grou|||
+TestManager::addTestFile|||TestManager::addTestFile|||[B] validation.grou|||
+$this|||$this|||[B] validation.grou|||
+dirname|||dirname|||[B] validation.grou|||
+__FILE__|||__FILE__|||[B] validation.grou|||
+libs|||libs|||[B] validation.grou|||
+media_validation|||media_validation|||[B] validation.grou|||
+transfer_validation|||transfer_validation|||[B] validation.grou|||

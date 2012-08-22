@@ -1,0 +1,9 @@
+CatalogDetail|||CatalogDetail|||[B] Catalog.php|||
+alias|||alias|||[B] Catalog.php|||
+feature|||feature|||[B] Catalog.php|||
+LIKE|||LIKE|||[B] Catalog.php|||
+$this|||$this|||[B] Catalog.php|||
+title|||title|||[B] Catalog.php|||
+composition|||composition|||[B] Catalog.php|||
+comment|||comment|||[B] Catalog.php|||
+$keyword|||$keyword|||[B] Catalog.php|||

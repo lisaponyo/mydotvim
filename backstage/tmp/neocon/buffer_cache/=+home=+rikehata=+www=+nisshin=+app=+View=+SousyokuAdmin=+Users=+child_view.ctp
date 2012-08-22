@@ -1,0 +1,35 @@
+<div |||<div |||[B] child_view.ctp|||
+class|||class|||[B] child_view.ctp|||
+span12|||span12|||[B] child_view.ctp|||
+<h3>|||<h3>|||[B] child_view.ctp|||
+User|||User|||[B] child_view.ctp|||
+</h3>|||</h3>|||[B] child_view.ctp|||
+<dl |||<dl |||[B] child_view.ctp|||
+horizontal|||horizontal|||[B] child_view.ctp|||
+<dt>|||<dt>|||[B] child_view.ctp|||
+</dt>|||</dt>|||[B] child_view.ctp|||
+<dd>|||<dd>|||[B] child_view.ctp|||
+echo|||echo|||[B] child_view.ctp|||
+$user|||$user|||[B] child_view.ctp|||
+Company|||Company|||[B] child_view.ctp|||
+name|||name|||[B] child_view.ctp|||
+</dd>|||</dd>|||[B] child_view.ctp|||
+username|||username|||[B] child_view.ctp|||
+email|||email|||[B] child_view.ctp|||
+</dl>|||</dl>|||[B] child_view.ctp|||
+$isParent|||$isParent|||[B] child_view.ctp|||
+$this|||$this|||[B] child_view.ctp|||
+Utils|||Utils|||[B] child_view.ctp|||
+tokenLink|||tokenLink|||[B] child_view.ctp|||
+array|||array|||[B] child_view.ctp|||
+controller|||controller|||[B] child_view.ctp|||
+users|||users|||[B] child_view.ctp|||
+action|||action|||[B] child_view.ctp|||
+switchMatching|||switchMatching|||[B] child_view.ctp|||
+false|||false|||[B] child_view.ctp|||
+null|||null|||[B] child_view.ctp|||
+else|||else|||[B] child_view.ctp|||
+empty|||empty|||[B] child_view.ctp|||
+user_id|||user_id|||[B] child_view.ctp|||
+true|||true|||[B] child_view.ctp|||
+</div>|||</div>|||[B] child_view.ctp|||

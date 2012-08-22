@@ -1,0 +1,13 @@
+App::uses|||App::uses|||[B] EsjigyosyoMst.p|||
+AppModel|||AppModel|||[B] EsjigyosyoMst.p|||
+Model|||Model|||[B] EsjigyosyoMst.p|||
+EsjigyosyoMst|||EsjigyosyoMst|||[B] EsjigyosyoMst.p|||
+class|||class|||[B] EsjigyosyoMst.p|||
+extends|||extends|||[B] EsjigyosyoMst.p|||
+table|||table|||[B] EsjigyosyoMst.p|||
+mixed|||mixed|||[B] EsjigyosyoMst.p|||
+False|||False|||[B] EsjigyosyoMst.p|||
+name|||name|||[B] EsjigyosyoMst.p|||
+public|||public|||[B] EsjigyosyoMst.p|||
+$useTable|||$useTable|||[B] EsjigyosyoMst.p|||
+esjigyosyo_mst|||esjigyosyo_mst|||[B] EsjigyosyoMst.p|||

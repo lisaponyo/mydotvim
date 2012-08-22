@@ -1,0 +1,14 @@
+App::uses|||App::uses|||[B] Business.php|||
+AppModel|||AppModel|||[B] Business.php|||
+Model|||Model|||[B] Business.php|||
+Business|||Business|||[B] Business.php|||
+property|||property|||[B] Business.php|||
+Company|||Company|||[B] Business.php|||
+$Company|||$Company|||[B] Business.php|||
+class|||class|||[B] Business.php|||
+extends|||extends|||[B] Business.php|||
+public|||public|||[B] Business.php|||
+$displayField|||$displayField|||[B] Business.php|||
+name|||name|||[B] Business.php|||
+$hasMany|||$hasMany|||[B] Business.php|||
+array|||array|||[B] Business.php|||

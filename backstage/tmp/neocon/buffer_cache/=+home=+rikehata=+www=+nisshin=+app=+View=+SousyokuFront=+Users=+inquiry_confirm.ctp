@@ -1,0 +1,64 @@
+echo|||echo|||[B] inquiry_confirm|||
+$this|||$this|||[B] inquiry_confirm|||
+element|||element|||[B] inquiry_confirm|||
+sidebar|||sidebar|||[B] inquiry_confirm|||
+article|||article|||[B] inquiry_confirm|||
+<div |||<div |||[B] inquiry_confirm|||
+InstanceBeginEditable|||InstanceBeginEditable|||[B] inquiry_confirm|||
+name|||name|||[B] inquiry_confirm|||
+class|||class|||[B] inquiry_confirm|||
+block|||block|||[B] inquiry_confirm|||
+<h1>|||<h1>|||[B] inquiry_confirm|||
+<img |||<img |||[B] inquiry_confirm|||
+form|||form|||[B] inquiry_confirm|||
+member|||member|||[B] inquiry_confirm|||
+main_title_08|||main_title_08|||[B] inquiry_confirm|||
+width|||width|||[B] inquiry_confirm|||
+height|||height|||[B] inquiry_confirm|||
+</h1>|||</h1>|||[B] inquiry_confirm|||
+Form|||Form|||[B] inquiry_confirm|||
+create|||create|||[B] inquiry_confirm|||
+User|||User|||[B] inquiry_confirm|||
+Utils|||Utils|||[B] inquiry_confirm|||
+hiddenVars|||hiddenVars|||[B] inquiry_confirm|||
+request|||request|||[B] inquiry_confirm|||
+data|||data|||[B] inquiry_confirm|||
+<table>|||<table>|||[B] inquiry_confirm|||
+$Judge|||$Judge|||[B] inquiry_confirm|||
+isGuest|||isGuest|||[B] inquiry_confirm|||
+<tr>|||<tr>|||[B] inquiry_confirm|||
+<th>|||<th>|||[B] inquiry_confirm|||
+</th>|||</th>|||[B] inquiry_confirm|||
+<td>|||<td>|||[B] inquiry_confirm|||
+$currentUser|||$currentUser|||[B] inquiry_confirm|||
+Company|||Company|||[B] inquiry_confirm|||
+</td>|||</td>|||[B] inquiry_confirm|||
+</tr>|||</tr>|||[B] inquiry_confirm|||
+companyname|||companyname|||[B] inquiry_confirm|||
+unit|||unit|||[B] inquiry_confirm|||
+username|||username|||[B] inquiry_confirm|||
+kana|||kana|||[B] inquiry_confirm|||
+flag|||flag|||[B] inquiry_confirm|||
+email|||email|||[B] inquiry_confirm|||
+else|||else|||[B] inquiry_confirm|||
+email_other|||email_other|||[B] inquiry_confirm|||
+$title|||$title|||[B] inquiry_confirm|||
+title|||title|||[B] inquiry_confirm|||
+<br />|||<br />|||[B] inquiry_confirm|||
+nl2br|||nl2br|||[B] inquiry_confirm|||
+inquiry|||inquiry|||[B] inquiry_confirm|||
+</table>|||</table>|||[B] inquiry_confirm|||
+<ul |||<ul |||[B] inquiry_confirm|||
+button|||button|||[B] inquiry_confirm|||
+<li>|||<li>|||[B] inquiry_confirm|||
+<input |||<input |||[B] inquiry_confirm|||
+type|||type|||[B] inquiry_confirm|||
+image|||image|||[B] inquiry_confirm|||
+send_btn_01_off|||send_btn_01_off|||[B] inquiry_confirm|||
+inputImgBtn|||inputImgBtn|||[B] inquiry_confirm|||
+regist|||regist|||[B] inquiry_confirm|||
+primarySubmit|||primarySubmit|||[B] inquiry_confirm|||
+</li>|||</li>|||[B] inquiry_confirm|||
+</ul>|||</ul>|||[B] inquiry_confirm|||
+</div>|||</div>|||[B] inquiry_confirm|||
+InstanceEndEditable|||InstanceEndEditable|||[B] inquiry_confirm|||

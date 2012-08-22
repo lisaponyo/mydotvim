@@ -1,0 +1,3 @@
+cdls	/home/rikehata/.shrc	/^function cdls() {$/
+removeGitSubmodule	/home/rikehata/.shrc	/^function removeGitSubmodule() {$/
+tarExtract	/home/rikehata/.shrc	/^function tarExtract() {$/

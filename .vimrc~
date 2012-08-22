@@ -1,0 +1,672 @@
+"==initialize== {{{
+set nocompatible               " be iMproved
+filetype plugin indent off     " required!
+scriptencoding utf-8
+
+let s:is_win = has('win95') + has('win16') + has('win32') + has('win64')
+
+if has('vim_starting')
+  set runtimepath^=~/.vim/backstage/,~/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/backstage/after/
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+"}}}
+"==repos on github== {{{
+NeoBundle 'vim-jp/vimdoc-ja'
+"NeoBundle 'vim-scripts/batch.vim'
+NeoBundle 'vim-scripts/Zenburn'
+NeoBundle 'vim-scripts/matchit.zip'
+"NeoBundle 'vim-scripts/catn.vim'
+"NeoBundle 'vim-scripts/vcscommand.vim'
+"NeoBundle 'vim-scripts/dbext.vim'
+"NeoBundle 'vim-scripts/project.tar.gz'
+NeoBundle 'vim-scripts/vimwiki'
+NeoBundle 'vim-scripts/wombat256.vim'
+NeoBundle 'vim-scripts/Lucius'
+"NeoBundle 'vim-scripts/sudo.vim'
+NeoBundle 'tyru/current-func-info.vim'
+"NeoBundle 'tyru/eskk.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/neocomplcache-snippets-complete'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'thinca/vim-qfreplace'
+"NeoBundle 'thinca/vim-prettyprint'
+"NeoBundle 'thinca/vim-scouter'
+"NeoBundle 'thinca/vim-ref'
+"NeoBundle 'h1mesuke/vim-alignta'
+NeoBundle 'vim-scripts/Align'
+"NeoBundle 'mattn/googletranslate-vim'
+NeoBundle 'mattn/zencoding-vim'
+"NeoBundle 'mattn/gist-vim'
+"NeoBundle 'mattn/learn-vimscript.git'
+"NeoBundle 'mattn/webapi-vim'
+"NeoBundle 'ujihisa/neco-look'
+"NeoBundle 'ujihisa/vimshell-ssh'
+"NeoBundle 'ujihisa/neco-ghc'
+"NeoBundle 'ujihisa/vital.vim'
+"NeoBundle 'nathanaelkane/vim-indent-guides'
+"NeoBundle 'lilydjwg/colorizer'
+NeoBundle 'violetyk/cake.vim'
+"NeoBundle 'kana/vim-vspec'
+NeoBundle 'kana/vim-smartchr'
+"NeoBundle 'kana/vim-submode'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'altercation/vim-colors-solarized'
+"NeoBundle 'tpope/vim-rails'
+"NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'jiangmiao/simple-javascript-indenter'
+"NeoBundle 'tsukkee/lingr-vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'ujihisa/unite-font'
+NeoBundle 'kmnk/vim-unite-svn'
+NeoBundle 'tacroe/unite-mark'
+NeoBundle 'Sixeight/unite-grep'
+NeoBundle 'tsukkee/unite-help'
+NeoBundle 'oppara/vim-unite-cake'
+NeoBundle 'tacroe/unite-mark'
+"}}}
+"==repos on vim-scripts== {{{
+"}}}
+"==non github repos== {{{
+"}}}
+"}}}
+
+"=SET= {{{
+"==initialize== {{{
+autocmd!
+filetype plugin indent on "ファイル形式の判別。ファイル形式に沿ったプラグインの読み込み
+syntax enable             "構文ハイライト機能On
+
+let s:iswin = has('win32') || has('win64')
+"}}}
+"==temporary files== {{{
+set nobackup                               "Backup作成
+set noswapfile                             "Swap作成
+"}}}
+"==search== {{{
+set notagbsearch     "Tagsの検索に効率の悪い線形探索を使用(HelptagsのVimバグ対応)
+set ignorecase       "大文字/小文字を区別しない
+set smartcase        "ignorecase時大文字が混じったら大文字小文字を区別
+set wrapscan         "最下部まで検索したら最初に戻る
+set incsearch        "文字列入力中にマッチ文字列に自動移動
+set hlsearch         "マッチ文字をハイライト表示
+set grepprg=internal "GrepはVim標準を使用
+"}}}
+"==display== {{{
+set statusline=\ [%n]\ %f\%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']['.cfi#get_func_name().']'}%=\ (0x%B\,%l,%c)
+set listchars=tab:>.,extends:<,trail:-,eol:$ "非表示文字の表現
+set list                 "非表示文字の表示
+set noruler              "カーソル行列の非表示
+set wrap                 "長い文字は折り返し表示
+set title                "Windowタイトル表示
+set cmdheight=2          "コマンドラインの行数
+set laststatus=2         "ステータス行を常に表示
+set scrolloff=3          "カーソル位置から上下は常に表示
+set sidescrolloff=3      "カーソル位置から上下は常に表示
+set showcmd              "入力コマンドを画面下部に表示
+set display=uhex         "印字不可能文字を16進数で表示"
+set imsearch=1
+set iminsert=1
+set cursorline           "カーソル行をハイライト
+set lazyredraw           "コマンド実行中は再描画しない
+set t_Co=256             "256 colors
+set matchpairs+=<:>      "<>にもマッチするようにする
+set showtabline=2        "タブは常に表示
+set equalalways          "Windowサイズ自動調整
+set cpoptions-=m         "移動キーを押しても括弧の強調を有効にする
+set matchtime=3          "移動キーを押しても括弧の強調を有効にする
+set eadirection=both
+set background=dark
+colorscheme wombat256mod
+set number               "行番号表示
+"}}}
+"==insert support== {{{
+set complete=.,w,b,u,t,i,k "補完候補設定
+set wildmenu               "コマンドライン入力の補完
+set noexpandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set autoindent
+"}}}
+"==move== {{{
+set hidden          "未保存でも別ファイルを開けるように(Buffer to Hidden)
+set virtualedit+=block
+"}}}
+"==directory== {{{
+set browsedir=current      "browseコマンドで開く場合の相対パス
+set noautochdir
+"}}}
+"==others== {{{
+set whichwrap=b,s,h,l,<,>,[,] "行末から次の行へ移動できるように
+set helplang=ja,en            "helpの優先順位
+set linebreak                 "単語レベルの折り返りを有効化
+set nrformats-=octal          "先頭0始まりでも10進数として扱う
+set clipboard+=autoselect     "Visual選択した範囲をClipBoardに自動コピー
+set more
+"}}}
+"==TODO== {{{
+set ttyfast                "高速ターミナル接続
+"set autowrite
+"set updatetime=25
+"set formatoptions=qlromM   "折り返し設定
+"}}}
+"}}}
+
+"=CHARACTER ENCODING= {{{
+"==character encoding== {{{
+set ambiwidth=double "□とか○の文字があってもカーソル位置がずれないようにする
+set termencoding=&encoding
+"}}}
+"}}}
+
+"=MAPPINGS= {{{
+"==inoremap== {{{
+let mapleader = ","
+"}}}
+"==inoremap== {{{
+inoremap <C-f> <Right>
+inoremap <C-b> <LEFT>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-d> <Del>
+"}}}
+"==vnoremap== {{{
+"vnoremap ; :
+"vnoremap : ;
+"}}}
+"==cnoremap== {{{
+cnoremap <C-f>  <Right>
+cnoremap <C-b>  <LEFT>
+cnoremap <C-a>  <Home>
+cnoremap <C-e>  <End>
+"}}}
+a
+
+"==nnoremap== {{{
+nnoremap <silent> <Esc><Esc> :<C-u>nohlsearch<CR><Esc>
+nnoremap <expr> h col('.') == 1 && foldlevel(line('.')) > 0 ? 'zc' : 'h'
+nnoremap <buffer> <C-]> :<C-u>UniteWithCursorWord -immediately tag<CR>
+nnoremap // :<C-u>Migemo<CR>
+"nnoremap ; :
+"nnoremap : ;
+"}}}
+"==tabs== {{{
+nnoremap [tab] <Nop>
+nmap     <Space>t [tab]
+nnoremap <silent> [tab]c :<C-u>tabnew<CR>
+nnoremap <silent> [tab]n :<C-u>tabnext<CR>
+nnoremap <silent> [tab]p :<C-u>tabprevious<CR>
+nnoremap <silent> [tab]k :<C-u>tabclose<CR>
+"}}}
+"==neocomplcache== {{{
+imap     <C-l>       <Plug>(neocomplcache_snippets_expand)
+smap     <C-l>       <Plug>(neocomplcache_snippets_expand)
+imap     <C-j>       <Plug>(neocomplcache_start_unite_complete)
+inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS>  neocomplcache#smart_close_popup()."\<C-h>"
+nnoremap <silent> <Leader>ss  :<C-u>NeoComplCacheEditSnippets<CR>
+"}}}
+"==unite== {{{
+nnoremap [unite]  <Nop>
+nmap     <Space>u [unite]
+nnoremap <silent> [unite]u  :<C-u>Unite -buffer-name=files buffer file_mru bookmark file<CR>
+nnoremap <silent> [unite]r  :<C-u>Unite register<CR>
+nnoremap <silent> [unite]o  :<C-u>Unite outline<CR>
+nnoremap <silent> [unite]b  :<C-u>Unite bookmark<CR>
+nnoremap <buffer> <C-]> :<C-u>UniteWithCursorWord -immediately tag<CR>
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings() "{{{
+  imap     <buffer>         jj <Plug>(unite_insert_leave)
+  imap     <buffer>         jk <Plug>(unite_insert_leave)
+  nnoremap <silent><buffer> t  G
+endfunction "}}}
+"}}}
+"==TODO== {{{
+nnoremap [todo] <Nop>
+nmap     <Space> [todo]
+nnoremap [todo]h  :<C-u>help 
+nnoremap <silent> [todo]f  :<C-u>VimFiler<CR>
+nnoremap <silent> [todo]s  :<C-u>VimShell<CR>
+nnoremap <silent> [todo]rv :<C-u>source $MYVIMRC \| if has('gui_running') \| source $MYGVIMRC \| endif <CR>
+nnoremap <silent> [todo]k  :<C-u>source %<CR>
+nnoremap <silent> [todo]o  :<C-u>sp<CR>
+nnoremap <silent> [todo]cd :<C-u>lcd %:p:h<CR>
+nnoremap <silent> [todo]e  :<C-u>edit $MYVIMRC<CR>
+"}}}
+"}}}
+
+"=LOAD OTHER FILES= {{{
+"==private settings== {{{
+for file in split(glob($HOME . '/.vim/backstage/private/*\.vim'), '\n')
+  execute ':source ' . file
+endfor
+"}}}
+"}}}
+
+"=PLUGIN SETTINGS= {{{
+"==neocomplcache== {{{
+let g:neocomplcache_enable_at_startup            = 1
+let g:neocomplcache_enable_smart_case            = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion   = 1
+let g:neocomplcache_min_syntax_length            = 3
+
+"let g:neocomplcache_enable_auto_delimiter        = 1 "TODO 後で変更するかも
+let g:neocomplcache_snippets_dir  = $HOME."/.vim/backstage/snippets"
+let g:neocomplcache_temporary_dir = $HOME."/.vim/backstage/tmp/neocon"
+" Enable omni completion.
+autocmd FileType css           setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript    setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python        setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml           setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php           setlocal omnifunc=phpcomplete#CompletePHP
+autocmd FileType c             setlocal omnifunc=ccomplete#Complete
+autocmd FileType xml           setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby          setlocal omnifunc=rubycomplete#Complete
+autocmd FileType *
+      \if &l:omnifunc == ''
+      \ |   setlocal omnifunc=syntaxcomplete#Complete
+      \ | endif
+"}}}
+"==unite== {{{
+" The prefix key.
+let g:unite_split_rule = 'botright'
+let g:unite_enable_start_insert = 1
+let g:unite_source_file_mru_limit = 200
+call unite#set_substitute_pattern('files', '^\~', substitute($HOME, '\\', '/', 'g'))
+call unite#set_substitute_pattern('files', '^\@<!/', '*/')
+call unite#custom_default_action('directory', 'vimfiler')
+call unite#custom_default_action('vimshell/history', 'insert')
+"}}}
+"==vimshell== {{{
+let g:vimshell_ignore_case = 1
+let g:vimshell_smart_case = 1
+let g:vimshell_temporary_directory = expand($HOME.'/.vim/backstage/tmp/vimshell/')
+let g:vimshell_execute_file_list = {}
+call vimshell#set_execute_file('txt,vim,c,h,cpp,d,xml,java', 'vim')
+let g:vimshell_execute_file_list['rb'] = 'ruby'
+let g:vimshell_execute_file_list['pl'] = 'perl'
+let g:vimshell_execute_file_list['py'] = 'python'
+call vimshell#set_execute_file('html,xhtml', 'gexe firefox')
+let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+"let g:vimshell_right_prompt = 'vcs#info("(%s)-[%b]", "(%s)-[%b|%a]")'
+let g:vimshell_enable_smart_case = 1
+
+if s:is_win
+  " Display user name on Windows.
+  let g:vimshell_prompt = $USERNAME."% "
+else
+  " Display user name on Linux.
+  let g:vimshell_prompt = $USER."% "
+  call vimshell#set_execute_file('bmp,jpg,png,gif', 'gexe eog')
+  call vimshell#set_execute_file('mp3,m4a,ogg', 'gexe amarok')
+  let g:vimshell_execute_file_list['zip'] = 'zipinfo'
+  call vimshell#set_execute_file('tgz,gz', 'gzcat')
+  call vimshell#set_execute_file('tbz,bz2', 'bzcat')
+endif
+
+autocmd FileType vimshell
+      \ call vimshell#altercmd#define('g', 'git')
+      \| call vimshell#altercmd#define('i', 'iexe')
+      \| call vimshell#altercmd#define('l', 'll')
+      \| call vimshell#altercmd#define('ll', 'ls -l')
+      \| call vimshell#hook#add('chpwd', 'my_chpwd', 'g:my_chpwd')
+
+function! g:my_chpwd(args, context)
+  call vimshell#execute('ls -la')
+endfunction
+
+autocmd FileType int-* call s:interactive_settings()
+function! s:interactive_settings()
+endfunction
+
+autocmd FileType vimshell call s:vimshell_my_mappings()
+let g:vimshell_no_default_keymappings = 1
+function! s:vimshell_my_mappings()
+  nmap <buffer> <CR> <Plug>(vimshell_enter)
+  nmap <buffer> q <Plug>(vimshell_hide)
+  nmap <buffer> Q <Plug>(vimshell_exit)
+  nmap <buffer> <C-p> <Plug>(vimshell_previous_prompt)
+  nmap <buffer> <C-n> <Plug>(vimshell_next_prompt)
+  nmap <buffer> <C-k> <Plug>(vimshell_delete_previous_output)
+  nmap <buffer> <C-y> <Plug>(vimshell_paste_prompt)
+  nmap <buffer> E <Plug>(vimshell_move_end_argument)
+  nmap <buffer> cc <Plug>(vimshell_change_line)
+  nmap <buffer> dd <Plug>(vimshell_delete_line)
+  nmap <buffer> I         <Plug>(vimshell_insert_head)
+  nmap <buffer> A         <Plug>(vimshell_append_end)
+  nmap <buffer> i         <Plug>(vimshell_insert_enter)
+  nmap <buffer> a         <Plug>(vimshell_append_enter)
+  nmap <buffer> ^         <Plug>(vimshell_move_head)
+  nmap <buffer> <C-c> <Plug>(vimshell_hangup)
+  nmap <buffer> <C-l> <Plug>(vimshell_clear)
+  "nmap <buffer> <C-z> <Plug>(vimshell_execute_by_background)
+  vmap <buffer> <C-p> <Plug>(vimshell_select_previous_prompt)
+  vmap <buffer> <C-n> <Plug>(vimshell_select_next_prompt)
+  inoremap <expr> <SID>(bs-ctrl-])    getline('.')[col('.') - 2] ==# "\<C-]>" ? "\<BS>" : ''
+  imap <buffer> <C-]>               <C-]><SID>(bs-ctrl-])
+  imap <buffer> <CR>                <C-]><Plug>(vimshell_enter)
+  inoremap <buffer> <expr><silent> <C-l>  unite#sources#vimshell_history#start_complete(!0)
+  imap <buffer> <TAB>  <Plug>(vimshell_command_complete)
+  imap <buffer> <C-a> <Plug>(vimshell_move_head)
+  imap <buffer> <C-u> <Plug>(vimshell_delete_backward_line)
+  imap <buffer> <C-w> <Plug>(vimshell_delete_backward_word)
+  "imap <silent><buffer><expr> <C-z> vimshell#mappings#smart_map(
+  "      \ "\<Plug>(vimshell_push_current_line)",
+  "      \ "\<Plug>(vimshell_execute_by_background)")
+  imap <buffer> <C-t> <Plug>(vimshell_insert_last_word)
+  imap <buffer> <C-x><C-h> <Plug>(vimshell_run_help)
+  imap <buffer> <C-c> <Plug>(vimshell_interrupt)
+  imap <buffer> <C-h>    <Plug>(vimshell_delete_backward_char)
+  imap <buffer> <BS>     <Plug>(vimshell_delete_backward_char)
+  imap <buffer> <C-k>     <Plug>(vimshell_delete_forward_line)
+  imap <buffer> <C-x>     <Plug>(vimshell_move_previous_window)
+endfunction
+"}}}
+"==vimfiler== {{{
+let g:vimfiler_as_default_explorer     = 1
+let g:vimfiler_max_history_directories = 30      " Default 10
+call vimfiler#set_execute_file('vim', 'vim')
+let g:vimfiler_external_copy_directory_command = 'cp -r $src $dest'
+let g:vimfiler_external_copy_file_command = 'cp $src $dest'
+let g:vimfiler_external_delete_command = 'rm -r $srcs'
+let g:vimfiler_external_move_command = 'mv $srcs $dest'
+"}}}
+"==others== {{{
+" let g:php_folding = 1 "重すぎる
+let g:SimpleJsIndenter_BriefMode = 1
+let g:clj_paren_rainbow          = 1
+let g:use_xhtml                  = 1
+let g:html_use_css               = 1
+let g:html_no_pre                = 1
+let g:vimwiki_folding            = 1
+let g:use_xhtml                  = 1
+let g:html_use_css               = 1
+let g:html_no_pre                = 1
+let g:gist_detect_filetype       = 1
+let g:gist_private               = 1
+let g:cakephp_enable_fix_mode    = 1
+let g:cakephp_app                = "/home/rikehata/www/nisshin/app/"
+let g:vimwiki_list = [{'path': $HOME.'/.vim/backstage/wiki/', 'path_html': $HOME.'/.vim/backstage/wiki/public_html/'}]
+let g:ref_phpmanual_path         = $HOME.'/.vim/backstage/refs/phpmanual/'
+"}}}
+"}}}
+
+"=AUTOCMD= {{{
+"==filetype detect== {{{
+autocmd BufRead,BufNewFile *.thtml setfiletype php "thtmlをphpファイルとして認識
+autocmd BufRead,BufNewFile *.ctp setfiletype php "ctpをphpファイルとして認識
+autocmd BufRead,BufNewFile *.tpl setfiletype php "tplをphpファイルとして認識
+autocmd BufRead,BufNewFile *.sp setfiletype php "spをphpファイルとして認識
+"}}}
+"==Auto execute vim source== {{{
+autocmd BufWritePost,FileWritePost *vim if &autoread | execute "QuickRun" | endif
+autocmd BufWritePost,FileWritePost *vimrc if &autoread | execute "QuickRun" | endif
+"}}}
+"==Remember the line of last open file== {{{
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+"}}}
+"==Completion of matching brackets== {{{
+augroup MyXML
+  autocmd!
+  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+  au! BufRead,BufNewFile *.ctp inoremap <buffer> </ </<C-x><C-o>
+  au! BufRead,BufNewFile *.sp inoremap <buffer> </ </<C-x><C-o>
+augroup END
+"}}}
+"==Command-line window mode== {{{
+autocmd CmdwinEnter * call s:init_cmdwin()
+function! s:init_cmdwin()
+  nnoremap <buffer> qq :<C-u>quit<CR>
+  inoremap <buffer><expr><CR> pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
+  inoremap <buffer><expr><C-h> pumvisible() ? "\<C-y>\<C-h>" : "\<C-h>"
+  inoremap <buffer><expr><BS> pumvisible() ? "\<C-y>\<C-h>" : "\<C-h>"
+  " Completion.
+  inoremap <buffer><expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+  startinsert!
+endfunction
+"}}}
+"==Command-line window mode== {{{
+autocmd CursorHold *  wall
+autocmd CursorHoldI *  wall
+"}}}
+"}}}
+
+"=FUNCTIONS= {{{
+"==usefull== {{{
+function! CSVH(x) "{{{
+  execute 'match Keyword /^\([^,]*,\)\{'.a:x.'}\zs[^,]*/'
+  execute 'normal ^'.a:x.'f,'
+endfunction
+command! -nargs=1 Csvhl :call CSVH(<args>) "}}}
+
+function! s:open_junk_file() "{{{
+  let l:junk_dir = $HOME . '/.vim/backstage/junk'. strftime('/%Y%m')
+  if !isdirectory(l:junk_dir)
+    call mkdir(l:junk_dir, 'p')
+  endif
+  let l:filename = input('Junk Code: ', l:junk_dir.strftime('/%Y-%m-%d-%H%M%S.'))
+  if l:filename != ''
+    execute 'edit ' . l:filename
+  endif
+endfunction
+command! -nargs=0 JunkFile call s:open_junk_file() "}}}
+
+"coding style {{{
+command! 
+      \   -bar -nargs=1 -complete=customlist,s:coding_style_complete
+      \   CodingStyle
+      \   execute get(s:coding_styles, <f-args>, '')
+let s:coding_styles = {}
+let s:coding_styles['short'] = 'set expandtab   tabstop=2 shiftwidth=2 softtabstop=2'
+let s:coding_styles['long']  = 'set expandtab   tabstop=4 shiftwidth=4 softtabstop=4'
+let s:coding_styles['gnu']   = 'set expandtab   tabstop=8 shiftwidth=2 softtabstop=2'
+let s:coding_styles['bsd']   = 'set noexpandtab tabstop=8 shiftwidth=4 softtabstop&'
+let s:coding_styles['linux'] = 'set noexpandtab tabstop=8 shiftwidth=8 softtabstop&'
+function! s:coding_style_complete(...)
+  return keys(s:coding_styles)
+endfunction "}}}
+
+command! -nargs=0 Dsl execute s:deleteSpaceLine() "{{{
+function! s:deleteSpaceLine()
+  let i = 0
+  let targets = []
+  for bufline in getbufline(bufname(0), 1, "$")
+    if !strlen(bufline)
+      call add(targets, i)
+    endif
+    let i = i + 1
+  endfor
+  let i = 0
+  for line in targets
+    let line = line - i
+    call cursor(line + 1, 0)
+    let i = i + 1
+    normal dd
+  endfor
+endfunction "}}}
+
+command! -nargs=0 CakeImgRegex execute s:cakeImgRegex() "{{{
+function! s:cakeImgRegex()
+  let row = 0
+  let lines = getline(row, line("$"))
+  let pat = '<img.\{-}>'
+  for str in lines
+    let row += 1
+    if str =~? pat
+      let match = matchstr(str, pat)
+      let match = substitute(match, '<img.\{-}".\{-}"\zs.\{-}\ze[a-zA-Z]', ", array(", "g")
+      let match = substitute(match, '<img src=".', '<?php echo $html->image("/front', "g")
+      let match = substitute(match, '.>$', ")); ?>", "g")
+      let pat_attr = 'array(\zs.\{-}\ze)'
+      let attr = matchstr(match, pat_attr)
+      let targets = split(attr, '"\zs ')
+      let results = []
+      let c = 0
+      for target in targets
+        if strlen(target) != 1
+          if c != 0
+            let target = ', "'.target
+          else
+            let target = '"'.target
+          endif
+          let target = substitute(target, '=', '" => ', "g")
+          call add(results, target)
+        endif
+        let c+=1
+      endfor
+      let result = join(results)
+      let match = substitute(match, pat_attr, result, "g")
+      let match = substitute(str, pat, match, "g")
+      call setline(row, match)
+    endif
+  endfor
+endfunction "}}}
+
+command! -nargs=1 -complete=file Rename f <args>|call delete(expand('#')) "{{{
+function! s:move_window_into_tab_page(target_tabpagenr)
+  " Move the current window into a:target_tabpagenr.
+  " If a:target_tabpagenr is 0, move into new tab page.
+  if a:target_tabpagenr < 0  " ignore invalid number.
+    return
+  endif
+  let original_tabnr = tabpagenr()
+  let target_bufnr = bufnr('')
+  let window_view = winsaveview()
+
+  if a:target_tabpagenr == 0
+    tabnew
+    tabmove  " Move new tabpage at the last.
+    execute target_bufnr 'buffer'
+    let target_tabpagenr = tabpagenr()
+  else
+    execute a:target_tabpagenr 'tabnext'
+    let target_tabpagenr = a:target_tabpagenr
+    topleft new  " FIXME: be customizable?
+    execute target_bufnr 'buffer'
+  endif
+  call winrestview(window_view)
+
+  execute original_tabnr 'tabnext'
+  if 1 < winnr('$')
+    close
+  else
+    enew
+  endif
+
+  execute target_tabpagenr 'tabnext'
+endfunction
+nnoremap <silent> <Space>ao :<C-u>call <SID>move_window_into_tab_page(0)<Cr> "}}}
+"}}}
+"==TODO== {{{
+function! HitEnter()
+  let s:base_buf = bufnr("")
+  execute 'new Scratch'
+  setlocal buftype=nofile
+  setlocal noswapfile
+  setlocal nobuflisted
+  setlocal filetype=scratch
+  let s:prev_reg = @a
+  let s:command = inputdialog('command : ')
+  redir @a|execute s:command|redir END
+  normal "ap
+  let @a = s:prev_reg
+endfunction
+"}}}
+"==dust== {{{
+""Functionリストの作成
+"command!
+"    \   -bar -nargs=0 Navi execute s:navi()
+"function! s:navi()
+"  if &ft ==? "c" || &ft ==? "cpp"
+"    vimgrep /^[^ \t#/\\*]\+[0-9A-Za-z_ :\t\\*]\+([^;]*$/j %
+"  elseif &ft ==? "lisp" 
+"    vimgrep /^[ \t]*(defun[ \t]\+.*$/j %
+"  elseif &ft ==? "perl"
+"    vimgrep /^[ \t]*sub[ \t]\+.*$/j %
+"  elseif &ft ==? "ruby"
+"    vimgrep /^[ \t]*\(class\|module\|def\|alias\)[ \t]\+.*$/j %
+"  elseif &ft ==? "vim"
+"    vimgrep /^[ \t]*\(class\|function\|function!\)[ \t]\+.*$/j %
+"  elseif &ft ==? "python"
+"    vimgrep /^[ \t]*\(class\|def\)[ \t]\+.*$/j %
+"  elseif &ft ==? "php"
+"    vimgrep /^[ \t]*\(class\|function\)[ \t]\+.*$/j %
+"  elseif &ft ==? "javascript"
+"    vimgrep /^[ \t]*function[ \t]\|[a-zA-Z_$][a-zA-Z0-9_$]*[ \t]*[=:][ \t]*function[ \t]*(/j %
+"  elseif &ft ==? "sh"
+"    vimgrep /^[ \t]*\(\h\w*[ \t]*()\|function[ \t]\+\h\w*\)/j %
+"  elseif &ft ==? "html"
+"    vimgrep /\c^\([ \t]*<h[123456].*\|[ \t]*<head.*\|[ \t]*<body.*\|[ \t]*<form.*\)$/j %
+"  elseif &ft ==? ""
+"    vimgrep /^[ \t]*[1234567890]\+[\.]\+.*$/j %
+"  elseif &ft ==? "tex"
+"    vimgrep /^\(\\chapter.*\|\\section.*\|\\subsection.*\|\\subsubsection.*\)$/j %
+"  elseif &ft ==? "pascal" 
+"    vimgrep /\c^procedure.*$/j %
+"  elseif &ft ==? "java"
+"    vimgrep /^[ \t]*[^#/\*=]\+[0-9a-zA-Z_ \t\*,.()]\+{[^;]*$/j %
+"  elseif &ft ==? "vb"
+"    vimgrep /\c^\(private\|public\|sub\|function\)[ \t]\+.*$/j %
+"  elseif &ft ==? "diff"
+"    vimgrep /^@@[0-9 \t,+-]\+@@$/j %
+"  else
+"    echo "This filetype is not supported."
+"  endif
+"endfunction
+"command! -nargs=* Grep execute s:mygrep(<f-args>)
+"function! s:mygrep(file, pattern)
+"  execute "vimgrep /".a:pattern."/gj **/".a:file
+"endfunction
+" " vimrcの再読込
+" augroup MyAutoCmd
+"   autocmd!
+" augroup END
+" if !has('gui_running') && !(has('win32') || has('win64'))
+"   autocmd MyAutoCmd BufWritePost *.vim nested source $MYVIMRC
+" else
+"   autocmd MyAutoCmd BufWritePost *.vim source $MYVIMRC | 
+"       \if has('gui_running') | source $MYGVIMRC
+"   autocmd MyAutoCmd BufWritePost *.vim if has('gui_running') | source $MYGVIMRC
+" endif
+"}}}
+"}}}
+
+"=TODO= {{{
+"nnoremap <sid>(command-line-enter) q:
+"xnoremap <sid>(command-line-enter) q:
+"nnoremap <sid>(command-line-norange) q:<C-u>
+"nmap :  <sid>(command-line-enter)
+"xmap :  <sid>(command-line-enter)
+"command! -nargs=* Test call s:test()
+"function! s:test()
+"  echo 'hoge'
+"endfunction
+"}}}
+if s:is_win
+  autocmd FileType vimshell setlocal termencOding=cp932
+endif
+function! RunPhpcs()
+  let l:filename=@%
+  let l:phpcs_output=system('phpcs --report=csv --standard=CakePHP '.l:filename)
+  let l:phpcs_list=split(l:phpcs_output, "\n")
+  unlet l:phpcs_list[0]
+  cexpr l:phpcs_list
+  cwindow
+endfunction
+
+"set tags=~/.tags
+set errorformat+="%f"\\,%l\\,%c\\,%t%*[a-zA-Z]\\,"%m"
+command! Phpcs execute RunPhpcs()
+
+unlet s:is_win

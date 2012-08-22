@@ -1,0 +1,67 @@
+article|||article|||[B] index.ctp|||
+<div |||<div |||[B] index.ctp|||
+InstanceBeginEditable|||InstanceBeginEditable|||[B] index.ctp|||
+name|||name|||[B] index.ctp|||
+class|||class|||[B] index.ctp|||
+block|||block|||[B] index.ctp|||
+<h1>|||<h1>|||[B] index.ctp|||
+</h1>|||</h1>|||[B] index.ctp|||
+echo|||echo|||[B] index.ctp|||
+$this|||$this|||[B] index.ctp|||
+Form|||Form|||[B] index.ctp|||
+create|||create|||[B] index.ctp|||
+array|||array|||[B] index.ctp|||
+searchResults|||searchResults|||[B] index.ctp|||
+type|||type|||[B] index.ctp|||
+Session|||Session|||[B] index.ctp|||
+flash|||flash|||[B] index.ctp|||
+<table |||<table |||[B] index.ctp|||
+search|||search|||[B] index.ctp|||
+<tr>|||<tr>|||[B] index.ctp|||
+<th>|||<th>|||[B] index.ctp|||
+</th>|||</th>|||[B] index.ctp|||
+<td>|||<td>|||[B] index.ctp|||
+input|||input|||[B] index.ctp|||
+maxlength|||maxlength|||[B] index.ctp|||
+</td>|||</td>|||[B] index.ctp|||
+</tr>|||</tr>|||[B] index.ctp|||
+</table>|||</table>|||[B] index.ctp|||
+<ul |||<ul |||[B] index.ctp|||
+doubleButton|||doubleButton|||[B] index.ctp|||
+<li |||<li |||[B] index.ctp|||
+button01|||button01|||[B] index.ctp|||
+Html|||Html|||[B] index.ctp|||
+link|||link|||[B] index.ctp|||
+action|||action|||[B] index.ctp|||
+index|||index|||[B] index.ctp|||
+button|||button|||[B] index.ctp|||
+true|||true|||[B] index.ctp|||
+</li>|||</li>|||[B] index.ctp|||
+button02|||button02|||[B] index.ctp|||
+submit|||submit|||[B] index.ctp|||
+inputImgBtn|||inputImgBtn|||[B] index.ctp|||
+false|||false|||[B] index.ctp|||
+escape|||escape|||[B] index.ctp|||
+</ul>|||</ul>|||[B] index.ctp|||
+</div>|||</div>|||[B] index.ctp|||
+empty|||empty|||[B] index.ctp|||
+$tags|||$tags|||[B] index.ctp|||
+<h2 |||<h2 |||[B] index.ctp|||
+head|||head|||[B] index.ctp|||
+</h2>|||</h2>|||[B] index.ctp|||
+topPagination|||topPagination|||[B] index.ctp|||
+element|||element|||[B] index.ctp|||
+pagination|||pagination|||[B] index.ctp|||
+memberList|||memberList|||[B] index.ctp|||
+<thead>|||<thead>|||[B] index.ctp|||
+</thead>|||</thead>|||[B] index.ctp|||
+foreach|||foreach|||[B] index.ctp|||
+$tag|||$tag|||[B] index.ctp|||
+<tbody>|||<tbody>|||[B] index.ctp|||
+nbsp|||nbsp|||[B] index.ctp|||
+startInput|||startInput|||[B] index.ctp|||
+kana|||kana|||[B] index.ctp|||
+</tbody>|||</tbody>|||[B] index.ctp|||
+tags|||tags|||[B] index.ctp|||
+sidebar|||sidebar|||[B] index.ctp|||
+manual|||manual|||[B] index.ctp|||

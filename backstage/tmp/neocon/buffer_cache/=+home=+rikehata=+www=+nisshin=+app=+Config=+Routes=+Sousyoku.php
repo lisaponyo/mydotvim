@@ -1,0 +1,14 @@
+SITE_REFERENCE_PREFIX|||SITE_REFERENCE_PREFIX|||[B] Sousyoku.php|||
+Router::connect|||Router::connect|||[B] Sousyoku.php|||
+admin|||admin|||[B] Sousyoku.php|||
+controller|||controller|||[B] Sousyoku.php|||
+array|||array|||[B] Sousyoku.php|||
+action|||action|||[B] Sousyoku.php|||
+index|||index|||[B] Sousyoku.php|||
+pages|||pages|||[B] Sousyoku.php|||
+display|||display|||[B] Sousyoku.php|||
+CakePlugin::routes|||CakePlugin::routes|||[B] Sousyoku.php|||
+require|||require|||[B] Sousyoku.php|||
+CAKE|||CAKE|||[B] Sousyoku.php|||
+Config|||Config|||[B] Sousyoku.php|||
+routes|||routes|||[B] Sousyoku.php|||

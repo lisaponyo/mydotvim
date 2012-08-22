@@ -1,0 +1,15 @@
+foreach|||foreach|||[B] bread.ctp|||
+$breadcrumbs|||$breadcrumbs|||[B] bread.ctp|||
+isset|||isset|||[B] bread.ctp|||
+link|||link|||[B] bread.ctp|||
+$this|||$this|||[B] bread.ctp|||
+Html|||Html|||[B] bread.ctp|||
+addCrumb|||addCrumb|||[B] bread.ctp|||
+name|||name|||[B] bread.ctp|||
+array|||array|||[B] bread.ctp|||
+else|||else|||[B] bread.ctp|||
+echo|||echo|||[B] bread.ctp|||
+getCrumbs|||getCrumbs|||[B] bread.ctp|||
+nbsp|||nbsp|||[B] bread.ctp|||
+false|||false|||[B] bread.ctp|||
+true|||true|||[B] bread.ctp|||

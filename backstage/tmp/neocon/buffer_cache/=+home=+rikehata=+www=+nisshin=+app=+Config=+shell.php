@@ -1,0 +1,12 @@
+define|||define|||[B] shell.php|||
+DOMAIN_NAME|||DOMAIN_NAME|||[B] shell.php|||
+sousyoku|||sousyoku|||[B] shell.php|||
+DOMAIN_REFERENCE|||DOMAIN_REFERENCE|||[B] shell.php|||
+Sousyoku|||Sousyoku|||[B] shell.php|||
+SITE_REFERENCE|||SITE_REFERENCE|||[B] shell.php|||
+Admin|||Admin|||[B] shell.php|||
+SITE_REFERENCE_PREFIX|||SITE_REFERENCE_PREFIX|||[B] shell.php|||
+true|||true|||[B] shell.php|||
+PROJECT_STATE|||PROJECT_STATE|||[B] shell.php|||
+develop|||develop|||[B] shell.php|||
+IS_DEVELOP|||IS_DEVELOP|||[B] shell.php|||

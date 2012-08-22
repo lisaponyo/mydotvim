@@ -1,0 +1,12 @@
+App::uses|||App::uses|||[B] AegisController|||
+Component|||Component|||[B] AegisController|||
+Controller|||Controller|||[B] AegisController|||
+class|||class|||[B] AegisController|||
+AegisControllerComponent|||AegisControllerComponent|||[B] AegisController|||
+extends|||extends|||[B] AegisController|||
+protected|||protected|||[B] AegisController|||
+public|||public|||[B] AegisController|||
+function|||function|||[B] AegisController|||
+initialize|||initialize|||[B] AegisController|||
+$controller|||$controller|||[B] AegisController|||
+$this|||$this|||[B] AegisController|||

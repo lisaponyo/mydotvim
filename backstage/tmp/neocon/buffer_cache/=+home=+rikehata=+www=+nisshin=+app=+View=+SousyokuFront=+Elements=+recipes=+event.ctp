@@ -1,0 +1,35 @@
+empty|||empty|||[B] event.ctp|||
+$recipe|||$recipe|||[B] event.ctp|||
+Event|||Event|||[B] event.ctp|||
+<div |||<div |||[B] event.ctp|||
+class|||class|||[B] event.ctp|||
+event|||event|||[B] event.ctp|||
+<h3>|||<h3>|||[B] event.ctp|||
+<img |||<img |||[B] event.ctp|||
+recipe|||recipe|||[B] event.ctp|||
+detail|||detail|||[B] event.ctp|||
+txt_02|||txt_02|||[B] event.ctp|||
+width|||width|||[B] event.ctp|||
+height|||height|||[B] event.ctp|||
+</h3>|||</h3>|||[B] event.ctp|||
+<ul>|||<ul>|||[B] event.ctp|||
+foreach|||foreach|||[B] event.ctp|||
+$event|||$event|||[B] event.ctp|||
+<li>|||<li>|||[B] event.ctp|||
+href|||href|||[B] event.ctp|||
+echo|||echo|||[B] event.ctp|||
+$this|||$this|||[B] event.ctp|||
+Html|||Html|||[B] event.ctp|||
+array|||array|||[B] event.ctp|||
+controller|||controller|||[B] event.ctp|||
+recipes|||recipes|||[B] event.ctp|||
+action|||action|||[B] event.ctp|||
+index|||index|||[B] event.ctp|||
+event_id|||event_id|||[B] event.ctp|||
+searchResults|||searchResults|||[B] event.ctp|||
+icon|||icon|||[B] event.ctp|||
+name|||name|||[B] event.ctp|||
+</a>|||</a>|||[B] event.ctp|||
+</li>|||</li>|||[B] event.ctp|||
+</ul>|||</ul>|||[B] event.ctp|||
+</div>|||</div>|||[B] event.ctp|||
