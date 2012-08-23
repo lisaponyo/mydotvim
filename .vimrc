@@ -35,9 +35,38 @@ set nocompatible               " Be iMproved
  NeoBundle 'vim-scripts/Zenburn'
  NeoBundle 'vim-scripts/wombat256.vim'
  NeoBundle 'Shougo/neocomplcache'
+ NeoBundle 'Shougo/neocomplcache-snippets-complete'
  " ...
+"=PLUGIN SETTINGS= {{{
 "==neocomplcache== {{{
 let g:neocomplcache_enable_at_startup            = 1
+let g:neocomplcache_enable_smart_case            = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion   = 1
+let g:neocomplcache_min_syntax_length            = 3
+
+"let g:neocomplcache_enable_auto_delimiter        = 1 "TODO 後で変更するかも
+let g:neocomplcache_snippets_dir  = $HOME."/.vim/snippets"
+let g:neocomplcache_temporary_dir = $HOME."/.vim/backstage/tmp/neocon"
+" Enable omni completion.
+autocmd FileType css           setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript    setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python        setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml           setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php           setlocal omnifunc=phpcomplete#CompletePHP
+autocmd FileType c             setlocal omnifunc=ccomplete#Complete
+autocmd FileType xml           setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby          setlocal omnifunc=rubycomplete#Complete
+autocmd FileType *
+      \if &l:omnifunc == ''
+      \ |   setlocal omnifunc=syntaxcomplete#Complete
+      \ | endif
+"}}}
+
+ 
+ 
+ "==neocomplcache== {{{
 "}}}
  filetype plugin indent on     " Required!
  "
@@ -76,7 +105,7 @@ set grepprg=internal "GrepはVim標準を使用
 "}}}
 "==display== {{{
 "set statusline=\ [%n]\ %f\%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']['.cfi#get_func_name().']'}%=\ (0x%B\,%l,%c)
-"set listchars=tab:>.,extends:<,trail:-,eol:$ "非表示文字の表現
+set listchars=tab:>.,extends:<,trail:-,eol:$ "非表示文字の表現
 set list                 "非表示文字の表示
 set noruler              "カーソル行列の非表示
 set wrap                 "長い文字は折り返し表示
@@ -130,4 +159,74 @@ set more
 "==ctags== {{{
 set tags=/home/ikehata/tags
 "}}}
+"==my setting== {{{
+" 全角スペースの表示
+ highlight ZenkakuSpace cterm=underline ctermbg=red guibg=#666666
+ au BufWinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+ au WinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+"}}}
+"=MAPPINGS= {{{
+"==inoremap== {{{
+let mapleader = ","
+"}}}
+"==inoremap== {{{
+inoremap <C-f> <Right>
+inoremap <C-b> <LEFT>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-d> <Del>
+"}}}
+"==vnoremap== {{{
+"vnoremap ; :
+"vnoremap : ;
+"}}}
+"==cnoremap== {{{
+cnoremap <C-f>  <Right>
+cnoremap <C-b>  <LEFT>
+cnoremap <C-a>  <Home>
+cnoremap <C-e>  <End>
+"}}}
+
+"==nnoremap== {{{
+nnoremap <silent> <Esc><Esc> :<C-u>nohlsearch<CR><Esc>
+nnoremap <expr> h col('.') == 1 && foldlevel(line('.')) > 0 ? 'zc' : 'h'
+nnoremap <buffer> <C-]> :<C-u>UniteWithCursorWord -immediately tag<CR>
+nnoremap // :<C-u>Migemo<CR>
+"nnoremap ; :
+"nnoremap : ;
+"}}}
+"==tabs== {{{
+nnoremap [tab] <Nop>
+nmap     <Space>t [tab]
+nnoremap <silent> [tab]c :<C-u>tabnew<CR>
+nnoremap <silent> [tab]n :<C-u>tabnext<CR>
+nnoremap <silent> [tab]p :<C-u>tabprevious<CR>
+nnoremap <silent> [tab]k :<C-u>tabclose<CR>
+"}}}
+"==neocomplcache== {{{
+imap     <C-l>       <Plug>(neocomplcache_snippets_expand)
+smap     <C-l>       <Plug>(neocomplcache_snippets_expand)
+imap     <C-j>       <Plug>(neocomplcache_start_unite_complete)
+inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS>  neocomplcache#smart_close_popup()."\<C-h>"
+nnoremap <silent> <Leader>ss  :<C-u>NeoComplCacheEditSnippets<CR>
+"}}}
+"==unite== {{{
+nnoremap [unite]  <Nop>
+"nmap     <Space>u [unite]
+"nnoremap <silent> [unite]u  :<C-u>Unite -buffer-name=files buffer file_mru bookmark file<CR>
+"nnoremap <silent> [unite]r  :<C-u>Unite register<CR>
+"nnoremap <silent> [unite]o  :<C-u>Unite outline<CR>
+"nnoremap <silent> [unite]b  :<C-u>Unite bookmark<CR>
+"nnoremap <buffer> <C-]> :<C-u>UniteWithCursorWord -immediately tag<CR>
+"autocmd FileType unite call s:unite_my_settings()
+"function! s:unite_my_settings() "{{{
+"  imap     <buffer>         jj <Plug>(unite_insert_leave)
+"  imap     <buffer>         jk <Plug>(unite_insert_leave)
+"  nnoremap <silent><buffer> t  G
+"endfunction "}}}
+"}}}
+
 "
