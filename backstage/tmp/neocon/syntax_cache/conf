@@ -1,12 +1,1 @@
-xxx|||xxx|||[S] confTodo|||
-XXX|||XXX|||[S] confTodo|||
-match|||match|||[S] confComment|||
-TODO|||TODO|||[S] confTodo|||
-FIXME|||FIXME|||[S] confTodo|||
-skip|||skip|||[S] confString|||
-start|||start|||[S] confString|||
-end|||end|||[S] confString|||
-confTodo|||confTodo|||[S] confTodo|||
-confComment|||confComment|||[S] confComment|||
-contains|||contains|||[S] confComment|||
-confString|||confString|||[S] confString|||
+[{'word': 'xxx', 'menu': '[S] confTodo'}, {'word': 'XXX', 'menu': '[S] confTodo'}, {'word': 'match', 'menu': '[S] confComment'}, {'word': 'TODO', 'menu': '[S] confTodo'}, {'word': 'FIXME', 'menu': '[S] confTodo'}, {'word': 'skip', 'menu': '[S] confString'}, {'word': 'start', 'menu': '[S] confString'}, {'word': 'end', 'menu': '[S] confString'}, {'word': 'confTodo', 'menu': '[S] confTodo'}, {'word': 'confComment', 'menu': '[S] confComment'}, {'word': 'contains', 'menu': '[S] confComment'}, {'word': 'confString', 'menu': '[S] confString'}]

@@ -135,9 +135,9 @@ set number               "行番号表示
 set complete=.,w,b,u,t,i,k "補完候補設定
 set wildmenu               "コマンドライン入力の補完
 set expandtab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set autoindent
 "}}}
 "==move== {{{
