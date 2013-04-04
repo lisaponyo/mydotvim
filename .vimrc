@@ -23,19 +23,17 @@ set nocompatible               " Be iMproved
  NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
  " vim-scripts repos
  NeoBundle 'L9'
- NeoBundle 'FuzzyFinder'
  NeoBundle 'rails.vim'
  " Non github repos
  NeoBundle 'git://git.wincent.com/command-t.git'
  " Non git repos
  NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
- NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 
  "増やし中 
  NeoBundle 'vim-scripts/Zenburn'
  NeoBundle 'vim-scripts/wombat256.vim'
  NeoBundle 'Shougo/neocomplcache'
- NeoBundle 'Shougo/neocomplcache-snippets-complete'
+ NeoBundle 'Shougo/neosnippet'
  " ...
 "=PLUGIN SETTINGS= {{{
 "==neocomplcache== {{{
@@ -134,7 +132,7 @@ set number               "行番号表示
 "==insert support== {{{
 set complete=.,w,b,u,t,i,k "補完候補設定
 set wildmenu               "コマンドライン入力の補完
-set expandtab
+"set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -157,7 +155,7 @@ set clipboard+=autoselect     "Visual選択した範囲をClipBoardに自動コ�
 set more
 "}}}
 "==ctags== {{{
-set tags=/home/ikehata/tags
+set tags=/home/rikehata/tags
 "}}}
 "==my setting== {{{
 " 全角スペースの表示
