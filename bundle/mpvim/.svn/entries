@@ -1,15 +1,15 @@
 10
 
 dir
-96962
+131240
 http://svn.macports.org/repository/macports/contrib/mpvim
 http://svn.macports.org/repository/macports
 
 
 
-2012-07-08T21:30:14.046216Z
-95293
-cal@macports.org
+2013-08-20T23:25:00.254045Z
+109868
+larryv@macports.org
 
 
 
@@ -25,6 +25,9 @@ cal@macports.org
 
 
 d073be05-634f-4543-b044-5fe20cf6d1d6
+
+indent
+dir
 
 ftdetect
 dir
@@ -47,11 +50,11 @@ file
 
 
 
-2012-08-21T05:08:31.000000Z
-800a4699b29c86e7b51b5702865c377f
-2011-08-20T00:35:32.381201Z
-82776
-raimue@macports.org
+2015-01-07T08:08:35.639479Z
+90d3232ba9cb56e0c250653a7058133f
+2013-01-29T07:27:56.627129Z
+102170
+larryv@macports.org
 has-props
 
 
@@ -73,7 +76,7 @@ has-props
 
 
 
-192
+222
 
 README
 file
@@ -81,11 +84,11 @@ file
 
 
 
-2012-08-21T05:08:31.000000Z
-a294c170cc8b363ff34f829e571b0de5
-2009-12-09T03:34:22.137810Z
-61336
-mnick@macports.org
+2015-01-07T08:08:35.640479Z
+359049c0aae8dc22bbca158cfd85f68d
+2013-05-13T17:12:50.688268Z
+106019
+larryv@macports.org
 
 
 
@@ -107,5 +110,5 @@ mnick@macports.org
 
 
 
-976
+1146
 

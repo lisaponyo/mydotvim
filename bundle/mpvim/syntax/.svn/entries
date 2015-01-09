@@ -1,15 +1,15 @@
 10
 
 dir
-96962
+131240
 http://svn.macports.org/repository/macports/contrib/mpvim/syntax
 http://svn.macports.org/repository/macports
 
 
 
-2012-07-08T21:30:14.046216Z
-95293
-cal@macports.org
+2013-08-20T23:25:00.254045Z
+109868
+larryv@macports.org
 
 
 
@@ -32,11 +32,11 @@ file
 
 
 
-2012-08-21T05:08:31.000000Z
-a59a0bd9e70531e6d424207dfd124716
-2012-07-08T21:30:14.046216Z
-95293
-cal@macports.org
+2015-01-07T08:08:35.520478Z
+cd9cd3cdaa59aa0a913718b86fc8403c
+2013-08-20T23:25:00.254045Z
+109868
+larryv@macports.org
 
 
 
@@ -58,5 +58,5 @@ cal@macports.org
 
 
 
-11602
+14669
 
