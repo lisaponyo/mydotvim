@@ -62,6 +62,25 @@ set grepprg=internal "GrepはVim標準を使用
 "}}}
 "==display== {{{
 "set statusline=\ [%n]\ %f\%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']['.cfi#get_func_name().']'}%=\ (0x%B\,%l,%c)
+
+set laststatus=2
+set statusline=%n\:%y
+set statusline+=[%{(&fenc!=''?&fenc:&enc)}]
+set statusline+=[%{Getff()}]
+set statusline+=%m%r\ %F%=[%l/%L]
+
+function! Getff()
+  if &ff == 'unix'
+    return 'LF'
+  elseif &ff == 'dos'
+    return 'CR+LF'
+  elseif &ff == 'mac'
+    return 'CR'
+  else
+    return '?'
+  endif
+endfunction
+
 set listchars=tab:>.,extends:<,trail:-,eol:$ "非表示文字の表現
 set list                 "非表示文字の表示
 set noruler              "カーソル行列の非表示
@@ -91,7 +110,7 @@ set number               "行番号表示
 "==insert support== {{{
 set complete=.,w,b,u,t,i,k "補完候補設定
 set wildmenu               "コマンドライン入力の補完
-set expandtab
+set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
