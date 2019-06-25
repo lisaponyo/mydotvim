@@ -29,6 +29,14 @@
  NeoBundle 'Shougo/neocomplcache'
  NeoBundle 'Shougo/neosnippet'
  NeoBundle 'Shougo/neosnippet-snippets'
+ NeoBundle 'rhysd/vim-clang-format'
+
+
+ " Linterはaleというのを使っているので！
+ NeoBundle 'w0rp/ale'                       " linter
+ " vimでeslintを使用するために必要なやつです。（必要あればインストールしてくださいませ！）
+ NeoBundle 'posva/vim-vue'       " Vim syntax highlighting for Vue components.
+
  
  call neobundle#end()
 
@@ -104,13 +112,12 @@ set cpoptions-=m         "移動キーを押しても括弧の強調を有効に
 set matchtime=3          "移動キーを押しても括弧の強調を有効にする
 set eadirection=both
 set background=dark
-colorscheme wombat256mod
 set number               "行番号表示
 "}}}
 "==insert support== {{{
 set complete=.,w,b,u,t,i,k "補完候補設定
 set wildmenu               "コマンドライン入力の補完
-set noexpandtab
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -133,7 +140,7 @@ set clipboard+=autoselect     "Visual選択した範囲をClipBoardに自動コ�
 set more
 "}}}
 "==ctags== {{{
-set tags=/home/rikehata/tags
+set tags=/home/developer/tags
 "}}}
 "==my setting== {{{
 " 全角スペースの表示
@@ -280,4 +287,23 @@ autocmd FileType *
       \ |   setlocal omnifunc=syntaxcomplete#Complete
       \ | endif
 "}}}
+colorscheme wombat256mod
 
+" ------------------------------------
+" JavaScript
+" ------------------------------------
+let g:ale_fixers = {
+\ 'javascript': ['eslint'],
+\ 'vue': ['eslint']
+\ }
+
+" F8で修正
+nmap <F8> <Plug>(ale_fix)
+
+let g:clang_format#style_options = {
+\ "AccessModifierOffset" : -4,
+\ "AlignConsecutiveAssignments" : "true",
+\ "Standard" : "C++11"}
+
+nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+vnoremap <buffer><Leader>cf :ClangFormat<CR>
