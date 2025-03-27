@@ -1,0 +1,192 @@
+" Note: Skip initialization for vim-tiny or vim-small.
+ if !1 | finish | endif
+
+ if has('vim_starting')
+   if &compatible
+     set nocompatible               " Be iMproved
+   endif
+
+   " Required:
+   set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
+ endif
+
+ " Required:
+ call neobundle#begin(expand($HOME . '/.vim/bundle/'))
+
+ " Let NeoBundle manage NeoBundle
+ " Required:
+ NeoBundleFetch 'Shougo/neobundle.vim'
+
+ " My Bundles here:
+ " Refer to |:NeoBundle-examples|.
+ " Note: You don't set neobundle setting in .gvimrc!
+ NeoBundle 'Shougo/vimproc'
+ NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+ NeoBundle 'vim-scripts/Zenburn'
+ NeoBundle 'vim-scripts/wombat256.vim'
+ NeoBundle 'Shougo/neocomplcache.vim'
+ NeoBundle 'Shougo/neosnippet'
+ NeoBundle 'Shougo/neosnippet-snippets'
+ NeoBundle 'rhysd/vim-clang-format'
+
+set nofixeol
+
+
+ call neobundle#end()
+
+ " Required:
+ filetype plugin indent on
+
+ " If there are uninstalled bundles found on startup,
+ " this will conveniently prompt you to install them.
+ NeoBundleCheck
+
+"=SET= {{{
+"==initialize== {{{
+autocmd!
+filetype plugin indent on "ファイル形式の判別。ファイル形式に沿ったプラグインの読み込み
+syntax enable             "構文ハイライト機能On
+
+let s:iswin = has('win32') || has('win64')
+"}}}
+set nowritebackup
+"==temporary files== {{{
+set nobackup                               "Backup作成
+set noswapfile                             "Swap作成
+"}}}
+"==search== {{{
+set notagbsearch     "Tagsの検索に効率の悪い線形探索を使用(HelptagsのVimバグ対応)
+set ignorecase       "大文字/小文字を区別しない
+set smartcase        "ignorecase時大文字が混じったら大文字小文字を区別
+set wrapscan         "最下部まで検索したら最初に戻る
+set incsearch        "文字列入力中にマッチ文字列に自動移動
+set hlsearch         "マッチ文字をハイライト表示
+set grepprg=internal "GrepはVim標準を使用
+"}}}
+"==display== {{{
+set laststatus=2
+set statusline=%n\:%y
+set statusline+=[%{(&fenc!=''?&fenc:&enc)}]
+set statusline+=[%{Getff()}]
+set statusline+=%m%r\ %F%=[%l/%L]
+
+function! Getff()
+  if &ff == 'unix'
+    return 'LF'
+  elseif &ff == 'dos'
+    return 'CR+LF'
+  elseif &ff == 'mac'
+    return 'CR'
+  else
+    return '?'
+  endif
+endfunction
+
+set listchars=tab:>.,extends:<,trail:-,eol:$ "非表示文字の表現
+set list                 "非表示文字の表示
+set noruler              "カーソル行列の非表示
+set wrap                 "長い文字は折り返し表示
+set title                "Windowタイトル表示
+set cmdheight=2          "コマンドラインの行数
+set laststatus=2         "ステータス行を常に表示
+set scrolloff=3          "カーソル位置から上下は常に表示
+set sidescrolloff=3      "カーソル位置から上下は常に表示
+set showcmd              "入力コマンドを画面下部に表示
+set display=uhex         "印字不可能文字を16進数で表示"
+set imsearch=1
+set iminsert=1
+set cursorline           "カーソル行をハイライト
+set lazyredraw           "コマンド実行中は再描画しない
+set t_Co=256             "256 colors
+set matchpairs+=<:>      "<>にもマッチするようにする
+set showtabline=2        "タブは常に表示
+set equalalways          "Windowサイズ自動調整
+set cpoptions-=m         "移動キーを押しても括弧の強調を有効にする
+set matchtime=3          "移動キーを押しても括弧の強調を有効にする
+set eadirection=both
+set background=dark
+set number               "行番号表示
+"}}}
+"==insert support== {{{
+set complete=.,w,b,u,t,i,k "補完候補設定
+set wildmenu               "コマンドライン入力の補完
+set noexpandtab
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set autoindent
+"}}}
+"==move== {{{
+set hidden          "未保存でも別ファイルを開けるように(Buffer to Hidden)
+set virtualedit+=block
+"}}}
+"==directory== {{{
+set browsedir=current      "browseコマンドで開く場合の相対パス
+set noautochdir
+"}}}
+"==others== {{{
+set whichwrap=b,s,h,l,<,>,[,] "行末から次の行へ移動できるように
+set helplang=ja,en            "helpの優先順位
+set linebreak                 "単語レベルの折り返りを有効化
+set nrformats-=octal          "先頭0始まりでも10進数として扱う
+set clipboard+=autoselect     "Visual選択した範囲をClipBoardに自動コピー
+set more
+"}}}
+"==ctags== {{{
+"set tags=/Users/hogehoge/tags
+"==my setting== {{{
+" 全角スペースの表示
+ highlight ZenkakuSpace cterm=underline ctermbg=red guibg=#666666
+ au BufWinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+ au WinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+"}}}
+
+"=PLUGIN SETTINGS= {{{
+"==neocomplcache== {{{
+let g:neocomplcache_enable_at_startup            = 1
+let g:neocomplcache_enable_smart_case            = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion   = 1
+let g:neocomplcache_min_syntax_length            = 3
+
+"let g:neocomplcache_enable_auto_delimiter        = 1 "TODO 後で変更するかも
+let g:neocomplcache_snippets_dir  = $HOME."/.vim/snippets"
+let g:neocomplcache_temporary_dir = $HOME."/.vim/backstage/tmp/neocon"
+
+let g:neosnippet#enable_snipmate_compatibility = 1
+"let g:neosnippet#snippets_directory=$HOME.'/.vim/snippets'
+"==neocomplcache== {{{
+imap     <C-l>       <Plug>(neosnippet_expand_or_jump)
+smap     <C-l>       <Plug>(neosnippet_expand_or_jump)
+imap     <C-j>       <Plug>(neocomplcache_start_unite_complete)
+inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS>  neocomplcache#smart_close_popup()."\<C-h>"
+nnoremap <silent> <Leader>ss  :<C-u>NeoComplCacheEditSnippets<CR>
+"}}}
+" Enable omni completion.
+autocmd FileType css           setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript    setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python        setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml           setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php           setlocal omnifunc=phpcomplete#CompletePHP
+autocmd FileType c             setlocal omnifunc=ccomplete#Complete
+autocmd FileType xml           setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby          setlocal omnifunc=rubycomplete#Complete
+autocmd FileType *
+      \if &l:omnifunc == ''
+      \ |   setlocal omnifunc=syntaxcomplete#Complete
+      \ | endif
+"}}}
+colorscheme wombat256mod
+
+let g:clang_format#style_options = {
+\ "AccessModifierOffset" : -4,
+\ "AlignConsecutiveAssignments" : "true",
+\ "Standard" : "C++11"}
+
+nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+vnoremap <buffer><Leader>cf :ClangFormat<CR>
