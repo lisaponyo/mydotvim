@@ -1,5 +1,9 @@
 # Vim 環境セットアップ手順
 
+```bash
+git clone https://github.com/lisaponyo/mydotvim.git
+````
+
 ## 1. 設定ファイルのシンボリックリンク作成
 
 ```bash
