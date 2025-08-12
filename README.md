@@ -4,7 +4,7 @@
 
 ```bash
 ln -s ~/mydotvim/.vimrc ~/.vimrc
-ln -s ~/mydotvim/ ~/.vim
+ln -s ~/mydotvim ~/.vim
 ````
 
 * `~/mydotvim` フォルダにある `.vimrc` と `.vim` をホームディレクトリにリンクします。
