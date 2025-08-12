@@ -6,6 +6,15 @@ git clone https://github.com/lisaponyo/mydotvim.git
 
 ## 1. 設定ファイルのシンボリックリンク作成
 
+・mac
+
+```bash
+ln -s ~/mydotvim/.vimrc_mac ~/.vimrc
+ln -s ~/mydotvim ~/.vim
+````
+
+・windows
+
 ```bash
 ln -s ~/mydotvim/.vimrc ~/.vimrc
 ln -s ~/mydotvim ~/.vim
