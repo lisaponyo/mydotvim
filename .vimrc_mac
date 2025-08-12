@@ -13,7 +13,7 @@
 
  Plug 'neoclide/coc.nvim', {'branch': 'release'} " 高性能補完プラグイン
 
- Plug 'Shougo/vimproc'
+ Plug 'Shougo/vimproc', {'do': 'make'}
  Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
  Plug 'vim-scripts/Zenburn'
  Plug 'vim-scripts/wombat256.vim'
