@@ -6,40 +6,35 @@
      set nocompatible               " Be iMproved
    endif
 
-   " Required:
-   set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
  endif
 
  " Required:
- call neobundle#begin(expand($HOME . '/.vim/bundle/'))
+ call plug#begin(expand($HOME . '/.vim/plugged/'))
 
- " Let NeoBundle manage NeoBundle
- " Required:
- NeoBundleFetch 'Shougo/neobundle.vim'
+ Plug 'neoclide/coc.nvim', {'branch': 'release'} " 高性能補完プラグイン
 
- " My Bundles here:
- " Refer to |:NeoBundle-examples|.
- " Note: You don't set neobundle setting in .gvimrc!
- NeoBundle 'Shougo/vimproc'
- NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
- NeoBundle 'vim-scripts/Zenburn'
- NeoBundle 'vim-scripts/wombat256.vim'
- NeoBundle 'Shougo/neocomplcache.vim'
- NeoBundle 'Shougo/neosnippet'
- NeoBundle 'Shougo/neosnippet-snippets'
- NeoBundle 'rhysd/vim-clang-format'
+ Plug 'Shougo/vimproc'
+ Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+ Plug 'vim-scripts/Zenburn'
+ Plug 'vim-scripts/wombat256.vim'
+ Plug 'Shougo/neocomplcache.vim'
+ Plug 'Shougo/neosnippet'
+ Plug 'Shougo/neosnippet-snippets'
+ Plug 'rhysd/vim-clang-format'
 
-set nofixeol
+ call plug#end()
 
+ " coc.nvim の設定
+ inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+ inoremap <silent><expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
- call neobundle#end()
+ set nofixeol
 
  " Required:
  filetype plugin indent on
 
  " If there are uninstalled bundles found on startup,
  " this will conveniently prompt you to install them.
- NeoBundleCheck
 
 "=SET= {{{
 "==initialize== {{{
@@ -93,11 +88,9 @@ set scrolloff=3          "カーソル位置から上下は常に表示
 set sidescrolloff=3      "カーソル位置から上下は常に表示
 set showcmd              "入力コマンドを画面下部に表示
 set display=uhex         "印字不可能文字を16進数で表示"
-set imsearch=1
 set iminsert=1
 set cursorline           "カーソル行をハイライト
 set lazyredraw           "コマンド実行中は再描画しない
-set t_Co=256             "256 colors
 set matchpairs+=<:>      "<>にもマッチするようにする
 set showtabline=2        "タブは常に表示
 set equalalways          "Windowサイズ自動調整
@@ -150,7 +143,6 @@ let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion   = 1
 let g:neocomplcache_min_syntax_length            = 3
 
-"let g:neocomplcache_enable_auto_delimiter        = 1 "TODO 後で変更するかも
 let g:neocomplcache_snippets_dir  = $HOME."/.vim/snippets"
 let g:neocomplcache_temporary_dir = $HOME."/.vim/backstage/tmp/neocon"
 
