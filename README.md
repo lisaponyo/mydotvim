@@ -49,6 +49,9 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | 
 
 `.vimrc` / `.vimrc_mac` はどちらも **vim-plug** を利用します。
 
+> `call plug#begin('~/.config/nvim/plugged')` は **Neovim (init.vim)** 向けの例です。  
+> このリポジトリは Vim 用 (`.vimrc`) なので、`~/.vim/plugged` を使う現在の設定（`call plug#begin(expand($HOME . '/.vim/plugged/'))`）のままで問題ありません。
+
 ### トラブルシュート（Windows で `E492: Not an editor command: PlugInstall/PlugStatus`）
 
 Windows 版 Vim では、`~/.vim` ではなく `~/vimfiles`、`~/.vimrc` ではなく `_vimrc` を見る環境があります。  
