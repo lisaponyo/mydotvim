@@ -40,13 +40,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-### Windows (PowerShell)
-
-```powershell
-iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | `
-  ni "$env:USERPROFILE\\vimfiles\\autoload\\plug.vim" -Force
-```
-
 うまくいかない場合は、以下を Git Bash で実行してください。
 
 ```bash
