@@ -49,6 +49,22 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | 
 
 `.vimrc` / `.vimrc_mac` はどちらも **vim-plug** を利用します。
 
+### トラブルシュート（Windows で `E492: Not an editor command: PlugInstall/PlugStatus`）
+
+Windows 版 Vim では、`~/.vim` ではなく `~/vimfiles`、`~/.vimrc` ではなく `_vimrc` を見る環境があります。  
+`E492` が出る場合は次を確認してください。
+
+1. `plug.vim` が `~/vimfiles/autoload/plug.vim` にあるか  
+2. 設定ファイルが Vim から読み込まれているか（`_vimrc`）
+
+Git Bash で以下を実行すると、`~/.vim` と `~/.vimrc` の内容を Windows 側の場所にも反映できます。
+
+```bash
+mkdir -p ~/vimfiles/autoload
+cp ~/.vim/autoload/plug.vim ~/vimfiles/autoload/plug.vim
+cp ~/.vimrc ~/_vimrc
+```
+
 ---
 
 ## 3. Vim でプラグインをインストール
