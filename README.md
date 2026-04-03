@@ -77,6 +77,14 @@ cp ~/.vimrc ~/_vimrc
 ※ `source ~/.vimrc` は **bash コマンドではなく Vim コマンド**（先頭に `:` を付けて Vim 内で実行）です。  
 bash で実行すると `.vimrc` の Vimscript を shell が解釈してエラーになります。
 `neobundle#begin` が表示される場合は古い `.vimrc` を読んでいるため、`~/mydotvim/.vimrc` を再リンクしてください。
+以下を Git Bash で実行して最新の `.vimrc` に差し替えてください。
+
+```bash
+ln -snf ~/mydotvim/.vimrc ~/.vimrc
+cp ~/mydotvim/.vimrc ~/_vimrc
+```
+
+その後 Vim で `:echo $MYVIMRC` を実行し、`/c/Users/<you>/.vimrc` または `/c/Users/<you>/_vimrc` を読んでいることを確認します。
 
 最新の `.vimrc` では `~/.vim/autoload/plug.vim` と `~/vimfiles/autoload/plug.vim` の両方を確認して `plug.vim` を読み込むようにしています。
 
