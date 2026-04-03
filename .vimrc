@@ -1,51 +1,35 @@
-" Note: Skip initialization for vim-tiny or vim-small.
+ " Note: Skip initialization for vim-tiny or vim-small.
  if !1 | finish | endif
 
  if has('vim_starting')
    if &compatible
      set nocompatible               " Be iMproved
    endif
-
-   " Required:
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
  endif
 
  " Required:
- call neobundle#begin(expand('~/.vim/bundle/'))
+ call plug#begin(expand($HOME . '/.vim/plugged/'))
 
- " Let NeoBundle manage NeoBundle
- " Required:
- NeoBundleFetch 'Shougo/neobundle.vim'
-
- " My Bundles here:
- " Refer to |:NeoBundle-examples|.
- " Note: You don't set neobundle setting in .gvimrc!
- NeoBundle 'Shougo/vimproc'
- "NeoBundle 'tpope/vim-fugitive'
- "NeoBundle 'Lokaltog/vim-easymotion' 爆速
- NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
- NeoBundle 'vim-scripts/Zenburn'
- NeoBundle 'vim-scripts/wombat256.vim'
- NeoBundle 'Shougo/neocomplcache'
- NeoBundle 'Shougo/neosnippet'
- NeoBundle 'Shougo/neosnippet-snippets'
- NeoBundle 'rhysd/vim-clang-format'
-
+ Plug 'Shougo/vimproc', {'do': 'make'}
+ "Plug 'tpope/vim-fugitive'
+ "Plug 'Lokaltog/vim-easymotion' 爆速
+ Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+ Plug 'vim-scripts/Zenburn'
+ Plug 'vim-scripts/wombat256.vim'
+ Plug 'Shougo/neocomplcache.vim'
+ Plug 'Shougo/neosnippet'
+ Plug 'Shougo/neosnippet-snippets'
+ Plug 'rhysd/vim-clang-format'
 
  " Linterはaleというのを使っているので！
- NeoBundle 'w0rp/ale'                       " linter
+ Plug 'w0rp/ale'                       " linter
  " vimでeslintを使用するために必要なやつです。（必要あればインストールしてくださいませ！）
- NeoBundle 'posva/vim-vue'       " Vim syntax highlighting for Vue components.
+ Plug 'posva/vim-vue'       " Vim syntax highlighting for Vue components.
 
- 
- call neobundle#end()
+ call plug#end()
 
  " Required:
  filetype plugin indent on
-
- " If there are uninstalled bundles found on startup,
- " this will conveniently prompt you to install them.
- NeoBundleCheck
 
 "=SET= {{{
 "==initialize== {{{
