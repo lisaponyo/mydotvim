@@ -7,8 +7,21 @@
    endif
  endif
 
+ " Windows で runtimepath 差異により autoload が見つからない場合の保険
+ if !exists('*plug#begin')
+   if filereadable(expand('~/.vim/autoload/plug.vim'))
+     execute 'source' fnameescape(expand('~/.vim/autoload/plug.vim'))
+   elseif filereadable(expand('~/vimfiles/autoload/plug.vim'))
+     execute 'source' fnameescape(expand('~/vimfiles/autoload/plug.vim'))
+   endif
+ endif
+
  " Required:
- call plug#begin(expand($HOME . '/.vim/plugged/'))
+ if has('win32') || has('win64')
+   call plug#begin(expand('~/vimfiles/plugged'))
+ else
+   call plug#begin(expand('~/.vim/plugged'))
+ endif
 
  Plug 'Shougo/vimproc', {'do': 'make'}
  "Plug 'tpope/vim-fugitive'

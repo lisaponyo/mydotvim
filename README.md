@@ -50,7 +50,7 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | 
 `.vimrc` / `.vimrc_mac` はどちらも **vim-plug** を利用します。
 
 > `call plug#begin('~/.config/nvim/plugged')` は **Neovim (init.vim)** 向けの例です。  
-> このリポジトリは Vim 用 (`.vimrc`) なので、`~/.vim/plugged` を使う現在の設定（`call plug#begin(expand($HOME . '/.vim/plugged/'))`）のままで問題ありません。
+> このリポジトリは Vim 用 (`.vimrc`) なので、`~/.vim/plugged`（Windows は `~/vimfiles/plugged`）を使う設定です。
 
 ### トラブルシュート（Windows で `E492: Not an editor command: PlugInstall/PlugStatus`）
 
@@ -71,6 +71,8 @@ cp ~/.vimrc ~/_vimrc
 
 `scriptnames` に `~/.vimrc` が見えていても、`plug.vim` が読み込まれていないと `:PlugInstall` / `:PlugStatus` は使えません。  
 その場合は Vim で `:echo glob('~/.vim/autoload/plug.vim')` と `:echo exists('*plug#begin')` を確認してください。
+
+最新の `.vimrc` では `~/.vim/autoload/plug.vim` と `~/vimfiles/autoload/plug.vim` の両方を確認して `plug.vim` を読み込むようにしています。
 
 ---
 
