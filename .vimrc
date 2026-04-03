@@ -7,6 +7,9 @@
    endif
  endif
 
+ " runtimepath からの読み込みを先に試す
+ silent! runtime autoload/plug.vim
+
  " Windows で runtimepath 差異により autoload が見つからない場合の保険
  if !exists('*plug#begin')
    if filereadable(expand('~/.vim/autoload/plug.vim'))
